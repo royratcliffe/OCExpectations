@@ -1,4 +1,4 @@
-// OCExpectations OCPositiveExpectationHandler.h
+// OCExpectations NSObject+OCSpecMatchers.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -26,8 +26,8 @@
 
 @class OCSpecMatcher;
 
-@interface OCPositiveExpectationHandler : NSObject
+@interface NSObject(OCSpecMatchers)
 
-- (id)handleActual:(id)actual matcher:(OCSpecMatcher *)matcher;
+- (OCSpecMatcher *)equal;
 
 @end

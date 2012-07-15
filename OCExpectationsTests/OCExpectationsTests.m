@@ -31,7 +31,7 @@
 - (void)testShouldBeEqualNoThrow
 {
 	// 1 + 1 should = 2
-	STAssertNoThrow([@(1 + 1) should:OCBeEqual(@2)], nil);
+	STAssertNoThrow([@(1 + 1) should:[@2 equal]], nil);
 }
 
 - (void)testShouldBeEqualThrows

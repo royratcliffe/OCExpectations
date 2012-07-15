@@ -23,7 +23,8 @@
 //------------------------------------------------------------------------------
 
 #import <OCExpectations/NSObject+OCExpectations.h>
-#import <OCExpectations/OCMatcher.h>
-#import <OCExpectations/OCEqual.h>
+#import <OCExpectations/NSObject+OCSpecMatchers.h>
+#import <OCExpectations/OCSpecMatcher.h>
+#import <OCExpectations/OCEqualSpecMatcher.h>
 #import <OCExpectations/OCPositiveExpectationHandler.h>
 #import <OCExpectations/OCMacros.h>

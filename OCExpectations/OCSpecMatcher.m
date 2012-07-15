@@ -1,4 +1,4 @@
-// OCExpectations OCEqual.m
+// OCExpectations OCMatcher.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,13 +22,31 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCEqual.h"
+#import "OCSpecMatcher.h"
 
-@implementation OCEqual
+@implementation OCSpecMatcher
+
+@synthesize expected = _expected;
+@synthesize actual = _actual;
+
+// convenience initialiser
+- (id)initWithExpected:(id)expected
+{
+	if ((self = [self init]))
+	{
+		self.expected = expected;
+	}
+	return self;
+}
 
 - (id)matches:(id)actual
 {
-	return @([[super matches:actual] isEqual:self.expected]);
+	return self.actual = actual;
+}
+
+- (NSString *)failureMessageForShould
+{
+	return [NSString stringWithFormat:@"expected %@ but got %@", self.expected, self.actual];
 }
 
 @end

@@ -1,4 +1,4 @@
-// OCExpectations OCEqual.h
+// OCExpectations NSObject+OCSpecMatchers.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,13 +22,15 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCMatcher.h"
+#import "NSObject+OCSpecMatchers.h"
 
-@interface OCEqual : OCMatcher
+#import "OCEqualSpecMatcher.h"
+
+@implementation NSObject(OCSpecMatchers)
+
+- (OCSpecMatcher *)equal
+{
+	return [[OCEqualSpecMatcher alloc] initWithExpected:self];
+}
 
 @end
-
-NS_INLINE OCMatcher *OCBeEqual(id expected)
-{
-	return [[OCEqual alloc] initWithExpected:expected];
-}

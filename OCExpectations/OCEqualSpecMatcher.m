@@ -1,4 +1,4 @@
-// OCExpectations OCPositiveExpectationHandler.h
+// OCExpectations OCEqual.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,12 +22,13 @@
 //
 //------------------------------------------------------------------------------
 
-#import <Foundation/Foundation.h>
+#import "OCEqualSpecMatcher.h"
 
-@class OCSpecMatcher;
+@implementation OCEqualSpecMatcher
 
-@interface OCPositiveExpectationHandler : NSObject
-
-- (id)handleActual:(id)actual matcher:(OCSpecMatcher *)matcher;
+- (id)matches:(id)actual
+{
+	return @([[super matches:actual] isEqual:self.expected]);
+}
 
 @end

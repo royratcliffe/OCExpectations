@@ -24,12 +24,17 @@
 
 #import <Foundation/Foundation.h>
 
-@class OCMatcher;
+@class OCSpecMatcher;
 
+/*!
+ * @details OCExpections adds two instance methods to every NSObject:
+ * - should:matcher
+ * - shouldNot:matcher
+ */
 @interface NSObject(OCExpectations)
 
-- (id)should:(OCMatcher *)matcher;
+- (id)should:(OCSpecMatcher *)matcher;
 
-- (id)shouldNot:(OCMatcher *)matcher;
+- (id)shouldNot:(OCSpecMatcher *)matcher;
 
 @end
