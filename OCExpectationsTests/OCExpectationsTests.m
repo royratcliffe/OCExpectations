@@ -28,29 +28,28 @@
 
 @implementation OCExpectationsTests
 
-- (void)testShouldBeEqualNoThrow
+- (void)testShouldEqualNoThrow
 {
 	// 1 + 1 should = 2
 	STAssertNoThrow([@(1 + 1) should:[@2 equal]], nil);
 }
 
-- (void)testShouldBeEqualThrows
+- (void)testShouldEqualThrows
 {
 	// 1 should NOT = 2
-	STAssertThrows([@1 should:OCBeEqual(@2)], nil);
+	STAssertThrows([@1 should:[@2 equal]], nil);
 }
 
-/*
- * The compiler needs to support the “statement expression” extension, where
- * statements can appear in expressions. The value of the last statement in the
- * sequence becomes the expression value.
- */
-- (void)testStatementExpression
+- (void)testShouldBeTrue
 {
-	int x = ({
-		1;
-	});
-	STAssertEquals(x, 1, nil);
+	STAssertNoThrow([@YES should:[@YES be]], nil);
+	STAssertThrows([@NO should:[@YES be]], nil);
+}
+
+- (void)testShouldBeFalse
+{
+	STAssertNoThrow([@NO should:[@NO be]], nil);
+	STAssertThrows([@YES should:[@NO be]], nil);
 }
 
 @end

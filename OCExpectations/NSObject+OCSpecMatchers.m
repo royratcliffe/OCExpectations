@@ -28,6 +28,11 @@
 
 @implementation NSObject(OCSpecMatchers)
 
+- (OCSpecMatcher *)be
+{
+	return [self equal];
+}
+
 - (OCSpecMatcher *)equal
 {
 	return [[OCEqualSpecMatcher alloc] initWithExpected:self];

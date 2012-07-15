@@ -24,6 +24,10 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ * @brief Matchers compare an expectation with an actual value.
+ * @details Used internally as the base matcher class.
+ */
 @interface OCSpecMatcher : NSObject
 
 @property(strong, NS_NONATOMIC_IOSONLY) id expected;

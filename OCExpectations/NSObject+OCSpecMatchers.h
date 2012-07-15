@@ -28,6 +28,7 @@
 
 @interface NSObject(OCSpecMatchers)
 
+- (OCSpecMatcher *)be;
 - (OCSpecMatcher *)equal;
 
 @end
