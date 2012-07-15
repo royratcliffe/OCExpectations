@@ -40,4 +40,17 @@
 	STAssertThrows([[NSNumber numberWithInt:1] should:[[OCEqual alloc] initWithExpected:[NSNumber numberWithInt:2]]], nil);
 }
 
+/*
+ * The compiler needs to support the “statement expression” extension, where
+ * statements can appear in expressions. The value of the last statement in the
+ * sequence becomes the expression value.
+ */
+- (void)testStatementExpression
+{
+	int x = ({
+		1;
+	});
+	STAssertEquals(x, 1, nil);
+}
+
 @end
