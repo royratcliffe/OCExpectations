@@ -26,3 +26,4 @@
 #import <OCExpectations/OCMatcher.h>
 #import <OCExpectations/OCEqual.h>
 #import <OCExpectations/OCPositiveExpectationHandler.h>
+#import <OCExpectations/OCMacros.h>
