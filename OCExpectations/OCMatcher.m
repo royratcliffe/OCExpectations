@@ -34,20 +34,19 @@
 {
 	if ((self = [self init]))
 	{
-		[self setExpected:expected];
+		self.expected = expected;
 	}
 	return self;
 }
 
 - (id)matches:(id)actual
 {
-	[self setActual:actual];
-	return actual;
+	return self.actual = actual;
 }
 
 - (NSString *)failureMessageForShould
 {
-	return [NSString stringWithFormat:@"expected %@ but got %@", [self expected], [self actual]];
+	return [NSString stringWithFormat:@"expected %@ but got %@", self.expected, self.actual];
 }
 
 @end

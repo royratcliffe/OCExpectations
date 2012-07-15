@@ -28,7 +28,7 @@
 
 - (id)matches:(id)actual
 {
-	return @([[super matches:actual] isEqual:[self expected]]);
+	return @([[super matches:actual] isEqual:self.expected]);
 }
 
 @end
