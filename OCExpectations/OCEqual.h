@@ -1,4 +1,4 @@
-// OCExpectations OCExpectations.h
+// OCExpectations OCEqual.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,7 +22,8 @@
 //
 //------------------------------------------------------------------------------
 
-#import <OCExpectations/NSObject+OCExpectations.h>
-#import <OCExpectations/OCMatcher.h>
-#import <OCExpectations/OCEqual.h>
-#import <OCExpectations/OCPositiveExpectationHandler.h>
+#import "OCMatcher.h"
+
+@interface OCEqual : OCMatcher
+
+@end

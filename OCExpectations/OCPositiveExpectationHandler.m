@@ -1,4 +1,4 @@
-// OCExpectations OCExpectations.h
+// OCExpectations OCPositiveExpectationHandler.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,7 +22,21 @@
 //
 //------------------------------------------------------------------------------
 
-#import <OCExpectations/NSObject+OCExpectations.h>
-#import <OCExpectations/OCMatcher.h>
-#import <OCExpectations/OCEqual.h>
-#import <OCExpectations/OCPositiveExpectationHandler.h>
+#import "OCPositiveExpectationHandler.h"
+#import "OCMatcher.h"
+
+@implementation OCPositiveExpectationHandler
+
+- (id)handleActual:(id)actual matcher:(OCMatcher *)matcher
+{
+	// Fails unless the matcher answers YES. Fails therefore if the matcher answers NO or nil.
+	id match = [matcher matches:actual];
+	if (match && [match isKindOfClass:[NSNumber class]] && [(NSNumber *)match boolValue])
+	{
+		return match;
+	}
+	[[NSException exceptionWithName:@"OCExpectationNotMetError" reason:[matcher failureMessageForShould] userInfo:nil] raise];
+	return nil;
+}
+
+@end

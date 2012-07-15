@@ -1,32 +1,43 @@
+// OCExpectations OCExpectationsTests.m
 //
-//  OCExpectationsTests.m
-//  OCExpectationsTests
+// Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
-//  Created by Roy Ratcliffe on 15/07/2012.
-//  Copyright (c) 2012 Pioneering Software, United Kingdom. All rights reserved.
+// Permission is hereby granted, free of charge, to any person obtaining a copy
+// of this software and associated documentation files (the “Software”), to deal
+// in the Software without restriction, including without limitation the rights
+// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+// copies of the Software, and to permit persons to whom the Software is
+// furnished to do so, subject to the following conditions:
 //
+//	The above copyright notice and this permission notice shall be included in
+//	all copies or substantial portions of the Software.
+//
+// THE SOFTWARE IS PROVIDED “AS IS,” WITHOUT WARRANTY OF ANY KIND, EITHER
+// EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+// MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO
+// EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
+// OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+// ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+// DEALINGS IN THE SOFTWARE.
+//
+//------------------------------------------------------------------------------
 
 #import "OCExpectationsTests.h"
 
+#import <OCExpectations/OCExpectations.h>
+
 @implementation OCExpectationsTests
 
-- (void)setUp
+- (void)testShouldBeEqualNoThrow
 {
-    [super setUp];
-    
-    // Set-up code here.
+	// 1 + 1 should = 2
+	STAssertNoThrow([[NSNumber numberWithInt:1 + 1] should:[[OCEqual alloc] initWithExpected:[NSNumber numberWithInt:2]]], nil);
 }
 
-- (void)tearDown
+- (void)testShouldBeEqualThrows
 {
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    STFail(@"Unit tests are not implemented yet in OCExpectationsTests");
+	// 1 should NOT = 2
+	STAssertThrows([[NSNumber numberWithInt:1] should:[[OCEqual alloc] initWithExpected:[NSNumber numberWithInt:2]]], nil);
 }
 
 @end

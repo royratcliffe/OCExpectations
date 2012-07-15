@@ -1,4 +1,4 @@
-// OCExpectations OCExpectations.h
+// OCExpectations OCEqual.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,7 +22,13 @@
 //
 //------------------------------------------------------------------------------
 
-#import <OCExpectations/NSObject+OCExpectations.h>
-#import <OCExpectations/OCMatcher.h>
-#import <OCExpectations/OCEqual.h>
-#import <OCExpectations/OCPositiveExpectationHandler.h>
+#import "OCEqual.h"
+
+@implementation OCEqual
+
+- (id)matches:(id)actual
+{
+	return [NSNumber numberWithBool:[[super matches:actual] isEqual:[self expected]]];
+}
+
+@end

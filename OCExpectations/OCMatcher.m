@@ -1,4 +1,4 @@
-// OCExpectations OCExpectations.h
+// OCExpectations OCMatcher.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,7 +22,32 @@
 //
 //------------------------------------------------------------------------------
 
-#import <OCExpectations/NSObject+OCExpectations.h>
-#import <OCExpectations/OCMatcher.h>
-#import <OCExpectations/OCEqual.h>
-#import <OCExpectations/OCPositiveExpectationHandler.h>
+#import "OCMatcher.h"
+
+@implementation OCMatcher
+
+@synthesize expected = _expected;
+@synthesize actual = _actual;
+
+// convenience initialiser
+- (id)initWithExpected:(id)expected
+{
+	if ((self = [self init]))
+	{
+		[self setExpected:expected];
+	}
+	return self;
+}
+
+- (id)matches:(id)actual
+{
+	[self setActual:actual];
+	return actual;
+}
+
+- (NSString *)failureMessageForShould
+{
+	return [NSString stringWithFormat:@"expected %@ but got %@", [self expected], [self actual]];
+}
+
+@end

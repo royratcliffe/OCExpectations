@@ -1,4 +1,4 @@
-// OCExpectations OCExpectations.h
+// OCExpectations OCMatcher.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,7 +22,16 @@
 //
 //------------------------------------------------------------------------------
 
-#import <OCExpectations/NSObject+OCExpectations.h>
-#import <OCExpectations/OCMatcher.h>
-#import <OCExpectations/OCEqual.h>
-#import <OCExpectations/OCPositiveExpectationHandler.h>
+#import <Foundation/Foundation.h>
+
+@interface OCMatcher : NSObject
+
+@property(strong, NS_NONATOMIC_IOSONLY) id expected;
+@property(strong, NS_NONATOMIC_IOSONLY) id actual;
+
+- (id)initWithExpected:(id)expected;
+- (id)matches:(id)actual;
+
+- (NSString *)failureMessageForShould;
+
+@end
