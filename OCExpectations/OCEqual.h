@@ -27,3 +27,8 @@
 @interface OCEqual : OCMatcher
 
 @end
+
+NS_INLINE OCMatcher *OCBeEqual(id expected)
+{
+	return [[OCEqual alloc] initWithExpected:expected];
+}

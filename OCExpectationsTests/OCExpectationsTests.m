@@ -31,13 +31,13 @@
 - (void)testShouldBeEqualNoThrow
 {
 	// 1 + 1 should = 2
-	STAssertNoThrow([@(1 + 1) should:[[OCEqual alloc] initWithExpected:@2]], nil);
+	STAssertNoThrow([@(1 + 1) should:OCBeEqual(@2)], nil);
 }
 
 - (void)testShouldBeEqualThrows
 {
 	// 1 should NOT = 2
-	STAssertThrows([@1 should:[[OCEqual alloc] initWithExpected:@2]], nil);
+	STAssertThrows([@1 should:OCBeEqual(@2)], nil);
 }
 
 /*
