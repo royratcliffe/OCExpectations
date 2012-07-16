@@ -68,4 +68,12 @@
 	STAssertEqualObjects(OCSpecNot([NSNull null]), @NO, nil);
 }
 
+- (void)testNotNot
+{
+	STAssertEqualObjects(OCSpecNot(OCSpecNot(@NO)), @NO, nil);
+	STAssertEqualObjects(OCSpecNot(OCSpecNot(@YES)), @YES, nil);
+	STAssertEqualObjects(OCSpecNot(OCSpecNot(nil)), @NO, nil);
+	STAssertEqualObjects(OCSpecNot(OCSpecNot([NSNull null])), @YES, nil);
+}
+
 @end
