@@ -1,4 +1,4 @@
-// OCExpectations OCEqualSpecMatcher.m
+// OCExpectations OCSpecEqualMatcher.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,13 +22,8 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCEqualSpecMatcher.h"
+#import <OCExpectations/OCSpecBaseMatcher.h>
 
-@implementation OCEqualSpecMatcher
-
-- (id)matches:(id)actual
-{
-	return @([[super matches:actual] isEqual:self.expected]);
-}
+@interface OCSpecEqualMatcher : OCSpecBaseMatcher
 
 @end

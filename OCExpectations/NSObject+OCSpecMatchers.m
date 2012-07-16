@@ -24,8 +24,8 @@
 
 #import "NSObject+OCSpecMatchers.h"
 
-#import "OCEqualSpecMatcher.h"
-#import "OCBeAKindOfSpecMatcher.h"
+#import "OCSpecEqualMatcher.h"
+#import "OCSpecBeAKindOfMatcher.h"
 
 @implementation NSObject(OCSpecMatchers)
 
@@ -36,12 +36,12 @@
 
 - (id<OCSpecMatcher>)beAKindOf
 {
-	return [[OCBeAKindOfSpecMatcher alloc] initWithExpected:self];
+	return [[OCSpecBeAKindOfMatcher alloc] initWithExpected:self];
 }
 
 - (id<OCSpecMatcher>)equal
 {
-	return [[OCEqualSpecMatcher alloc] initWithExpected:self];
+	return [[OCSpecEqualMatcher alloc] initWithExpected:self];
 }
 
 @end

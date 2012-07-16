@@ -1,4 +1,4 @@
-// OCExpectations OCBeAKindOfSpecMatcher.h
+// OCExpectations OCSpecBeAKindOfMatcher.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -30,6 +30,6 @@
  * Objective-C classes are not objects in the same sense as regular
  * objects. They cannot take the place of regular message receivers.
  */
-@interface OCBeAKindOfSpecMatcher : OCSpecBaseMatcher
+@interface OCSpecBeAKindOfMatcher : OCSpecBaseMatcher
 
 @end

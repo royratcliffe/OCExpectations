@@ -26,8 +26,8 @@
 #import <OCExpectations/NSObject+OCSpecMatchers.h>
 #import <OCExpectations/OCSpecMatcher.h>
 #import <OCExpectations/OCSpecBaseMatcher.h>
-#import <OCExpectations/OCEqualSpecMatcher.h>
-#import <OCExpectations/OCBeAKindOfSpecMatcher.h>
+#import <OCExpectations/OCSpecEqualMatcher.h>
+#import <OCExpectations/OCSpecBeAKindOfMatcher.h>
 #import <OCExpectations/OCPositiveExpectationHandler.h>
 #import <OCExpectations/OCNegativeExpectationHandler.h>
 #import <OCExpectations/OCHelpers.h>
