@@ -7,6 +7,12 @@
 	#import <Foundation/Foundation.h>
 #endif
 
+// Redefine YES and NO for iOS 5.1 because Objective-C's objc/objc.h as shipped
+// with that version of the iOS operating system defines YES and NO as
+// expressions, specifically (BOOL)1 and (BOOL)0 respectively. This makes @YES
+// and @NO invalid syntax. You would have to use @(YES) and @(NO)
+// instead. Painful. Work around this issue for the time being because doubtless
+// Apple will fix this in later iOS versions.
 #if __has_feature(objc_bool)
 #undef YES
 #undef NO
