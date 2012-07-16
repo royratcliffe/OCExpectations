@@ -1,4 +1,4 @@
-// OCExpectations OCMatcher.m
+// OCExpectations OCSpecBaseMatcher.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,36 +22,22 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCSpecMatcher.h"
+#import <OCExpectations/OCSpecMatcher.h>
 
-@implementation OCSpecMatcher
+/*!
+ * @brief Matchers compare an expectation with an actual value.
+ * @details Used internally as the base matcher class.
+ */
+@interface OCSpecBaseMatcher : NSObject<OCSpecMatcher>
 
-@synthesize expected = _expected;
-@synthesize actual = _actual;
+@property(strong, NS_NONATOMIC_IOSONLY) id expected;
+@property(strong, NS_NONATOMIC_IOSONLY) id actual;
 
-// convenience initialiser
-- (id)initWithExpected:(id)expected
-{
-	if ((self = [self init]))
-	{
-		self.expected = expected;
-	}
-	return self;
-}
+- (id)initWithExpected:(id)expected;
 
-- (id)matches:(id)actual
-{
-	return self.actual = actual;
-}
+- (id)matches:(id)actual;
 
-- (NSString *)failureMessageForShould
-{
-	return [NSString stringWithFormat:@"expected %@ to match %@", self.expected, self.actual];
-}
-
-- (NSString *)failureMessageForShouldNot
-{
-	return [NSString stringWithFormat:@"expected %@ not to match %@", self.expected, self.actual];
-}
+- (NSString *)failureMessageForShould;
+- (NSString *)failureMessageForShouldNot;
 
 @end

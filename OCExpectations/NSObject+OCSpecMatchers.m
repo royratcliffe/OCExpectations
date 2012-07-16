@@ -29,17 +29,17 @@
 
 @implementation NSObject(OCSpecMatchers)
 
-- (OCSpecMatcher *)be
+- (id<OCSpecMatcher>)be
 {
 	return [self equal];
 }
 
-- (OCSpecMatcher *)beAKindOf
+- (id<OCSpecMatcher>)beAKindOf
 {
 	return [[OCBeAKindOfSpecMatcher alloc] initWithExpected:self];
 }
 
-- (OCSpecMatcher *)equal
+- (id<OCSpecMatcher>)equal
 {
 	return [[OCEqualSpecMatcher alloc] initWithExpected:self];
 }

@@ -22,8 +22,8 @@
 //
 //------------------------------------------------------------------------------
 
-#import <OCExpectations/OCSpecMatcher.h>
+#import <OCExpectations/OCSpecBaseMatcher.h>
 
-@interface OCEqualSpecMatcher : OCSpecMatcher
+@interface OCEqualSpecMatcher : OCSpecBaseMatcher
 
 @end

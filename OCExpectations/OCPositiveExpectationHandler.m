@@ -28,7 +28,7 @@
 
 @implementation OCPositiveExpectationHandler
 
-- (id)handleActual:(id)actual matcher:(OCSpecMatcher *)matcher
+- (id)handleActual:(id)actual matcher:(id<OCSpecMatcher>)matcher
 {
 	// Fails unless the matcher answers YES. Fails therefore if the matcher answers NO or nil.
 	id match = [matcher matches:actual];

@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class OCSpecMatcher;
+@protocol OCSpecMatcher;
 
 /*!
  * To obtain a matcher, send one of the following messages to the expected
@@ -33,8 +33,8 @@
  */
 @interface NSObject(OCSpecMatchers)
 
-- (OCSpecMatcher *)be;
-- (OCSpecMatcher *)beAKindOf;
-- (OCSpecMatcher *)equal;
+- (id<OCSpecMatcher>)be;
+- (id<OCSpecMatcher>)beAKindOf;
+- (id<OCSpecMatcher>)equal;
 
 @end

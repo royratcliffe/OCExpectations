@@ -28,12 +28,12 @@
 
 @implementation NSObject(OCExpectations)
 
-- (id)should:(OCSpecMatcher *)matcher
+- (id)should:(id<OCSpecMatcher>)matcher
 {
 	return [[[OCPositiveExpectationHandler alloc] init] handleActual:self matcher:matcher];
 }
 
-- (id)shouldNot:(OCSpecMatcher *)matcher
+- (id)shouldNot:(id<OCSpecMatcher>)matcher
 {
 	return [[[OCNegativeExpectationHandler alloc] init] handleActual:self matcher:matcher];
 }

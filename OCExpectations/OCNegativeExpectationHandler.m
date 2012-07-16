@@ -28,7 +28,7 @@
 
 @implementation OCNegativeExpectationHandler
 
-- (id)handleActual:(id)actual matcher:(OCSpecMatcher *)matcher
+- (id)handleActual:(id)actual matcher:(id<OCSpecMatcher>)matcher
 {
 	id match = [matcher respondsToSelector:@selector(doesNotMatch:)] ? OCSpecNot([matcher doesNotMatch:actual]) : [matcher matches:actual];
 	if ([OCSpecNot(match) boolValue] != NO)

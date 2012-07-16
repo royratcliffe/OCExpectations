@@ -24,10 +24,10 @@
 
 #import <Foundation/Foundation.h>
 
-@class OCSpecMatcher;
+@protocol OCSpecMatcher;
 
 @interface OCNegativeExpectationHandler : NSObject
 
-- (id)handleActual:(id)actual matcher:(OCSpecMatcher *)matcher;
+- (id)handleActual:(id)actual matcher:(id<OCSpecMatcher>)matcher;
 
 @end
