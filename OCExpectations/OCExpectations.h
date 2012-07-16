@@ -30,4 +30,4 @@
 #import <OCExpectations/OCSpecBeAKindOfMatcher.h>
 #import <OCExpectations/OCPositiveExpectationHandler.h>
 #import <OCExpectations/OCNegativeExpectationHandler.h>
-#import <OCExpectations/OCHelpers.h>
+#import <OCExpectations/OCSpecHelpers.h>
