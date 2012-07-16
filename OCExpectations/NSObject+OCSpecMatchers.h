@@ -26,6 +26,11 @@
 
 @class OCSpecMatcher;
 
+/*!
+ * To obtain a matcher, send one of the following messages to the expected
+ * value. The expected value must always be an object. With LLVM 4.0, you can
+ * conveniently convert literals to Objective-C objects.
+ */
 @interface NSObject(OCSpecMatchers)
 
 - (OCSpecMatcher *)be;
