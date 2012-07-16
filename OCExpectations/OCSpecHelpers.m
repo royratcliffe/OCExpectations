@@ -22,7 +22,7 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCHelpers.h"
+#import "OCSpecHelpers.h"
 
 NSNumber *OCSpecNotBool(NSNumber *boolOrNil)
 {

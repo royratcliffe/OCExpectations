@@ -11,8 +11,8 @@
 		7807A2CF15B447E100E69441 /* OCSpecBaseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7807A2CD15B447E100E69441 /* OCSpecBaseMatcher.m */; };
 		78AC87FA15B3CB400062854A /* OCNegativeExpectationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78AC87FB15B3CB400062854A /* OCNegativeExpectationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AC87F915B3CB400062854A /* OCNegativeExpectationHandler.m */; };
-		78AC87FF15B3D9F30062854A /* OCHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AC87FD15B3D9F30062854A /* OCHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		78AC880015B3D9F30062854A /* OCHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AC87FE15B3D9F30062854A /* OCHelpers.m */; };
+		78AC87FF15B3D9F30062854A /* OCSpecHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78AC880015B3D9F30062854A /* OCSpecHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AC87FE15B3D9F30062854A /* OCSpecHelpers.m */; };
 		78C49B6115B42F3100758C9D /* OCSpecBeAKindOfMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C49B5F15B42F3100758C9D /* OCSpecBeAKindOfMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78C49B6215B42F3100758C9D /* OCSpecBeAKindOfMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C49B6015B42F3100758C9D /* OCSpecBeAKindOfMatcher.m */; };
 		78C5D6AD15B2858B00CA3D41 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C5D6AC15B2858B00CA3D41 /* Cocoa.framework */; };
@@ -49,8 +49,8 @@
 		7807A2CD15B447E100E69441 /* OCSpecBaseMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecBaseMatcher.m; sourceTree = "<group>"; };
 		78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNegativeExpectationHandler.h; sourceTree = "<group>"; };
 		78AC87F915B3CB400062854A /* OCNegativeExpectationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNegativeExpectationHandler.m; sourceTree = "<group>"; };
-		78AC87FD15B3D9F30062854A /* OCHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCHelpers.h; sourceTree = "<group>"; };
-		78AC87FE15B3D9F30062854A /* OCHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCHelpers.m; sourceTree = "<group>"; };
+		78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecHelpers.h; sourceTree = "<group>"; };
+		78AC87FE15B3D9F30062854A /* OCSpecHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecHelpers.m; sourceTree = "<group>"; };
 		78C49B5F15B42F3100758C9D /* OCSpecBeAKindOfMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecBeAKindOfMatcher.h; sourceTree = "<group>"; };
 		78C49B6015B42F3100758C9D /* OCSpecBeAKindOfMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecBeAKindOfMatcher.m; sourceTree = "<group>"; };
 		78C5D6A915B2858B00CA3D41 /* OCExpectations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OCExpectations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -159,8 +159,8 @@
 				78C5D6E615B2941A00CA3D41 /* OCPositiveExpectationHandler.m */,
 				78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */,
 				78AC87F915B3CB400062854A /* OCNegativeExpectationHandler.m */,
-				78AC87FD15B3D9F30062854A /* OCHelpers.h */,
-				78AC87FE15B3D9F30062854A /* OCHelpers.m */,
+				78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */,
+				78AC87FE15B3D9F30062854A /* OCSpecHelpers.m */,
 				78C5D6B315B2858B00CA3D41 /* Supporting Files */,
 			);
 			path = OCExpectations;
@@ -209,7 +209,7 @@
 				78C5D6EC15B296B900CA3D41 /* OCExpectations.h in Headers */,
 				78D1C1F515B32DB20059BF0A /* NSObject+OCSpecMatchers.h in Headers */,
 				78AC87FA15B3CB400062854A /* OCNegativeExpectationHandler.h in Headers */,
-				78AC87FF15B3D9F30062854A /* OCHelpers.h in Headers */,
+				78AC87FF15B3D9F30062854A /* OCSpecHelpers.h in Headers */,
 				78C49B6115B42F3100758C9D /* OCSpecBeAKindOfMatcher.h in Headers */,
 				7807A2CE15B447E100E69441 /* OCSpecBaseMatcher.h in Headers */,
 			);
@@ -327,7 +327,7 @@
 				78C5D6E815B2941A00CA3D41 /* OCPositiveExpectationHandler.m in Sources */,
 				78D1C1F615B32DB20059BF0A /* NSObject+OCSpecMatchers.m in Sources */,
 				78AC87FB15B3CB400062854A /* OCNegativeExpectationHandler.m in Sources */,
-				78AC880015B3D9F30062854A /* OCHelpers.m in Sources */,
+				78AC880015B3D9F30062854A /* OCSpecHelpers.m in Sources */,
 				78C49B6215B42F3100758C9D /* OCSpecBeAKindOfMatcher.m in Sources */,
 				7807A2CF15B447E100E69441 /* OCSpecBaseMatcher.m in Sources */,
 			);

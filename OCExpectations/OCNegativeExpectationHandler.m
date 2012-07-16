@@ -24,7 +24,7 @@
 
 #import "OCNegativeExpectationHandler.h"
 #import "OCSpecMatcher.h"
-#import "OCHelpers.h"
+#import "OCSpecHelpers.h"
 
 @implementation OCNegativeExpectationHandler
 
