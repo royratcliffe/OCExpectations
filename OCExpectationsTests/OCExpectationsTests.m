@@ -42,6 +42,10 @@
 
 - (void)testShouldBeTrue
 {
+	// Yes should yes be! Sounds Shakespearean. Or in other words, yes should be
+	// yes. However, you cannot easily construct matchers as you can with RSpec
+	// in Ruby. In Objective-C, the receiver must always come first and the
+	// language does not support modular mix-ins.
 	STAssertNoThrow([@YES should:[@YES be]], nil);
 	STAssertThrows([@NO should:[@YES be]], nil);
 }

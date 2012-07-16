@@ -24,6 +24,11 @@
 
 #import <Foundation/Foundation.h>
 
+/*!
+ * Matchers must also respond to the NSObject protocol for
+ * introspection. OCExpectations sends -[NSObject respondsToSelector:] to
+ * matchers in order to determine if optional methods exist.
+ */
 @protocol OCSpecMatcher<NSObject>
 
 - (id)initWithExpected:(id)expected;

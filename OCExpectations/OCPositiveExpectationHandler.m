@@ -30,7 +30,10 @@
 
 - (id)handleActual:(id)actual matcher:(id<OCSpecMatcher>)matcher
 {
-	// Fails unless the matcher answers YES. Fails therefore if the matcher answers NO or nil.
+	// Fails unless the matcher answers YES. Fails therefore if the matcher
+	// answers NO or nil. Send the match result through the negation
+	// process. This gives a boolean and handles the nil machinations. Negate
+	// the matcher's answer and compare against NO.
 	id match = [matcher matches:actual];
 	if ([OCSpecNot(match) boolValue] == NO)
 	{
