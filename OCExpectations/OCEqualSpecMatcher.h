@@ -22,7 +22,7 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCSpecMatcher.h"
+#import <OCExpectations/OCSpecMatcher.h>
 
 @interface OCEqualSpecMatcher : OCSpecMatcher
 
