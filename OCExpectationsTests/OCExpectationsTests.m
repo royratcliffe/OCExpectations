@@ -85,4 +85,9 @@
 	STAssertNoThrow([@123 should:[NSStringFromClass([NSNumber class]) beAKindOf]], nil);
 }
 
+- (void)testEqualHasObjectiveCSemantics
+{
+	STAssertNoThrow([@"5" should:[@"5" equal]], nil);
+}
+
 @end
