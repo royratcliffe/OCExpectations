@@ -88,6 +88,7 @@
 - (void)testEqualHasObjectiveCSemantics
 {
 	STAssertNoThrow([@"5" should:[@"5" equal]], nil);
+	STAssertNoThrow([@5 should:[@5 equal]], nil);
 }
 
 @end
