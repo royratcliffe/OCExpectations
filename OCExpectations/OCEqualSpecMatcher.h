@@ -1,4 +1,4 @@
-// OCExpectations OCEqual.h
+// OCExpectations OCEqualSpecMatcher.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
