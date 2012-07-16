@@ -9,6 +9,30 @@
 /* Begin PBXBuildFile section */
 		7807A2CE15B447E100E69441 /* OCSpecBaseMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 7807A2CC15B447E100E69441 /* OCSpecBaseMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7807A2CF15B447E100E69441 /* OCSpecBaseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7807A2CD15B447E100E69441 /* OCSpecBaseMatcher.m */; };
+		7807A2DF15B4542A00E69441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7807A2DE15B4542A00E69441 /* Foundation.framework */; };
+		7807A2ED15B4542A00E69441 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C5D6C215B2858B00CA3D41 /* SenTestingKit.framework */; };
+		7807A2EF15B4542A00E69441 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7807A2EE15B4542A00E69441 /* UIKit.framework */; };
+		7807A2F015B4542A00E69441 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7807A2DE15B4542A00E69441 /* Foundation.framework */; };
+		7807A2F315B4542A00E69441 /* libOCExpectations.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7807A2DD15B4542A00E69441 /* libOCExpectations.a */; };
+		7807A30315B454A300E69441 /* OCExpectationsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C5D6CF15B2858B00CA3D41 /* OCExpectationsTests.m */; };
+		7807A30415B454C400E69441 /* OCSpecHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AC87FE15B3D9F30062854A /* OCSpecHelpers.m */; };
+		7807A30515B454C800E69441 /* OCNegativeExpectationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AC87F915B3CB400062854A /* OCNegativeExpectationHandler.m */; };
+		7807A30615B454D100E69441 /* OCPositiveExpectationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C5D6E615B2941A00CA3D41 /* OCPositiveExpectationHandler.m */; };
+		7807A30715B454DC00E69441 /* OCSpecBeAKindOfMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C49B6015B42F3100758C9D /* OCSpecBeAKindOfMatcher.m */; };
+		7807A30815B454E100E69441 /* OCSpecEqualMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C5D6E215B2910D00CA3D41 /* OCSpecEqualMatcher.m */; };
+		7807A30915B454E300E69441 /* OCSpecBaseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 7807A2CD15B447E100E69441 /* OCSpecBaseMatcher.m */; };
+		7807A30A15B454EB00E69441 /* NSObject+OCSpecMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D1C1F415B32DB20059BF0A /* NSObject+OCSpecMatchers.m */; };
+		7807A30B15B454EF00E69441 /* NSObject+OCExpectations.m in Sources */ = {isa = PBXBuildFile; fileRef = 78C5D6DA15B287D700CA3D41 /* NSObject+OCExpectations.m */; };
+		7807A30C15B4587800E69441 /* OCExpectations.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C5D6EB15B296B900CA3D41 /* OCExpectations.h */; };
+		7807A30D15B4587800E69441 /* NSObject+OCExpectations.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C5D6D915B287D700CA3D41 /* NSObject+OCExpectations.h */; };
+		7807A30E15B4587800E69441 /* NSObject+OCSpecMatchers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78D1C1F315B32DB20059BF0A /* NSObject+OCSpecMatchers.h */; };
+		7807A30F15B4587800E69441 /* OCSpecMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C5D6DD15B28D3200CA3D41 /* OCSpecMatcher.h */; };
+		7807A31015B4587800E69441 /* OCSpecBaseMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7807A2CC15B447E100E69441 /* OCSpecBaseMatcher.h */; };
+		7807A31115B4587800E69441 /* OCSpecEqualMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C5D6E115B2910D00CA3D41 /* OCSpecEqualMatcher.h */; };
+		7807A31215B4587800E69441 /* OCSpecBeAKindOfMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C49B5F15B42F3100758C9D /* OCSpecBeAKindOfMatcher.h */; };
+		7807A31315B4587800E69441 /* OCPositiveExpectationHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C5D6E515B2941A00CA3D41 /* OCPositiveExpectationHandler.h */; };
+		7807A31415B4587800E69441 /* OCNegativeExpectationHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */; };
+		7807A31515B4587800E69441 /* OCSpecHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */; };
 		78AC87FA15B3CB400062854A /* OCNegativeExpectationHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78AC87FB15B3CB400062854A /* OCNegativeExpectationHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AC87F915B3CB400062854A /* OCNegativeExpectationHandler.m */; };
 		78AC87FF15B3D9F30062854A /* OCSpecHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,6 +59,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		7807A2F115B4542A00E69441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 78C5D69F15B2858B00CA3D41 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7807A2DC15B4542A00E69441;
+			remoteInfo = OCExpectationsLib;
+		};
 		78C5D6C515B2858B00CA3D41 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78C5D69F15B2858B00CA3D41 /* Project object */;
@@ -44,9 +75,35 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7807A2DB15B4542A00E69441 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				7807A30C15B4587800E69441 /* OCExpectations.h in CopyFiles */,
+				7807A30D15B4587800E69441 /* NSObject+OCExpectations.h in CopyFiles */,
+				7807A30E15B4587800E69441 /* NSObject+OCSpecMatchers.h in CopyFiles */,
+				7807A30F15B4587800E69441 /* OCSpecMatcher.h in CopyFiles */,
+				7807A31015B4587800E69441 /* OCSpecBaseMatcher.h in CopyFiles */,
+				7807A31115B4587800E69441 /* OCSpecEqualMatcher.h in CopyFiles */,
+				7807A31215B4587800E69441 /* OCSpecBeAKindOfMatcher.h in CopyFiles */,
+				7807A31315B4587800E69441 /* OCPositiveExpectationHandler.h in CopyFiles */,
+				7807A31415B4587800E69441 /* OCNegativeExpectationHandler.h in CopyFiles */,
+				7807A31515B4587800E69441 /* OCSpecHelpers.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7807A2CC15B447E100E69441 /* OCSpecBaseMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecBaseMatcher.h; sourceTree = "<group>"; };
 		7807A2CD15B447E100E69441 /* OCSpecBaseMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecBaseMatcher.m; sourceTree = "<group>"; };
+		7807A2DD15B4542A00E69441 /* libOCExpectations.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOCExpectations.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7807A2DE15B4542A00E69441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7807A2EC15B4542A00E69441 /* OCExpectationsLibTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCExpectationsLibTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7807A2EE15B4542A00E69441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNegativeExpectationHandler.h; sourceTree = "<group>"; };
 		78AC87F915B3CB400062854A /* OCNegativeExpectationHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCNegativeExpectationHandler.m; sourceTree = "<group>"; };
 		78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecHelpers.h; sourceTree = "<group>"; };
@@ -80,6 +137,25 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7807A2DA15B4542A00E69441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7807A2DF15B4542A00E69441 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7807A2E815B4542A00E69441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7807A2ED15B4542A00E69441 /* SenTestingKit.framework in Frameworks */,
+				7807A2EF15B4542A00E69441 /* UIKit.framework in Frameworks */,
+				7807A2F015B4542A00E69441 /* Foundation.framework in Frameworks */,
+				7807A2F315B4542A00E69441 /* libOCExpectations.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78C5D6A515B2858B00CA3D41 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -116,6 +192,8 @@
 			children = (
 				78C5D6A915B2858B00CA3D41 /* OCExpectations.framework */,
 				78C5D6C115B2858B00CA3D41 /* OCExpectationsTests.octest */,
+				7807A2DD15B4542A00E69441 /* libOCExpectations.a */,
+				7807A2EC15B4542A00E69441 /* OCExpectationsLibTests.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +203,8 @@
 			children = (
 				78C5D6AC15B2858B00CA3D41 /* Cocoa.framework */,
 				78C5D6C215B2858B00CA3D41 /* SenTestingKit.framework */,
+				7807A2DE15B4542A00E69441 /* Foundation.framework */,
+				7807A2EE15B4542A00E69441 /* UIKit.framework */,
 				78C5D6AE15B2858B00CA3D41 /* Other Frameworks */,
 			);
 			name = Frameworks;
@@ -218,6 +298,42 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7807A2DC15B4542A00E69441 /* OCExpectationsLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7807A2FD15B4542A00E69441 /* Build configuration list for PBXNativeTarget "OCExpectationsLib" */;
+			buildPhases = (
+				7807A2D915B4542A00E69441 /* Sources */,
+				7807A2DA15B4542A00E69441 /* Frameworks */,
+				7807A2DB15B4542A00E69441 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OCExpectationsLib;
+			productName = OCExpectationsLib;
+			productReference = 7807A2DD15B4542A00E69441 /* libOCExpectations.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		7807A2EB15B4542A00E69441 /* OCExpectationsLibTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7807A30015B4542A00E69441 /* Build configuration list for PBXNativeTarget "OCExpectationsLibTests" */;
+			buildPhases = (
+				7807A2E715B4542A00E69441 /* Sources */,
+				7807A2E815B4542A00E69441 /* Frameworks */,
+				7807A2E915B4542A00E69441 /* Resources */,
+				7807A2EA15B4542A00E69441 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7807A2F215B4542A00E69441 /* PBXTargetDependency */,
+			);
+			name = OCExpectationsLibTests;
+			productName = OCExpectationsLibTests;
+			productReference = 7807A2EC15B4542A00E69441 /* OCExpectationsLibTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 		78C5D6A815B2858B00CA3D41 /* OCExpectations */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78C5D6D315B2858B00CA3D41 /* Build configuration list for PBXNativeTarget "OCExpectations" */;
@@ -278,11 +394,20 @@
 			targets = (
 				78C5D6A815B2858B00CA3D41 /* OCExpectations */,
 				78C5D6C015B2858B00CA3D41 /* OCExpectationsTests */,
+				7807A2DC15B4542A00E69441 /* OCExpectationsLib */,
+				7807A2EB15B4542A00E69441 /* OCExpectationsLibTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7807A2E915B4542A00E69441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78C5D6A715B2858B00CA3D41 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -302,6 +427,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7807A2EA15B4542A00E69441 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
 		78C5D6BF15B2858B00CA3D41 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -318,6 +456,29 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7807A2D915B4542A00E69441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7807A30415B454C400E69441 /* OCSpecHelpers.m in Sources */,
+				7807A30515B454C800E69441 /* OCNegativeExpectationHandler.m in Sources */,
+				7807A30615B454D100E69441 /* OCPositiveExpectationHandler.m in Sources */,
+				7807A30715B454DC00E69441 /* OCSpecBeAKindOfMatcher.m in Sources */,
+				7807A30815B454E100E69441 /* OCSpecEqualMatcher.m in Sources */,
+				7807A30915B454E300E69441 /* OCSpecBaseMatcher.m in Sources */,
+				7807A30A15B454EB00E69441 /* NSObject+OCSpecMatchers.m in Sources */,
+				7807A30B15B454EF00E69441 /* NSObject+OCExpectations.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7807A2E715B4542A00E69441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7807A30315B454A300E69441 /* OCExpectationsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		78C5D6A415B2858B00CA3D41 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +505,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		7807A2F215B4542A00E69441 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7807A2DC15B4542A00E69441 /* OCExpectationsLib */;
+			targetProxy = 7807A2F115B4542A00E69441 /* PBXContainerItemProxy */;
+		};
 		78C5D6C615B2858B00CA3D41 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 78C5D6A815B2858B00CA3D41 /* OCExpectations */;
@@ -371,6 +537,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7807A2FE15B4542A00E69441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DSTROOT = /tmp/OCExpectationsLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCExpectations/OCExpectations-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = OCExpectations;
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/$(PRODUCT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7807A2FF15B4542A00E69441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				DSTROOT = /tmp/OCExpectationsLib.dst;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCExpectations/OCExpectations-Prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-ObjC";
+				PRIVATE_HEADERS_FOLDER_PATH = "/include/$(PRODUCT_NAME)";
+				PRODUCT_NAME = OCExpectations;
+				PUBLIC_HEADERS_FOLDER_PATH = "/include/$(PRODUCT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7807A30115B4542A00E69441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCExpectations/OCExpectations-Prefix.pch";
+				INFOPLIST_FILE = "OCExpectationsTests/OCExpectationsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		7807A30215B4542A00E69441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "OCExpectations/OCExpectations-Prefix.pch";
+				INFOPLIST_FILE = "OCExpectationsTests/OCExpectationsTests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_LDFLAGS = "-all_load";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
 		78C5D6D115B2858B00CA3D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -473,6 +721,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7807A2FD15B4542A00E69441 /* Build configuration list for PBXNativeTarget "OCExpectationsLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7807A2FE15B4542A00E69441 /* Debug */,
+				7807A2FF15B4542A00E69441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		7807A30015B4542A00E69441 /* Build configuration list for PBXNativeTarget "OCExpectationsLibTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7807A30115B4542A00E69441 /* Debug */,
+				7807A30215B4542A00E69441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		78C5D6A215B2858B00CA3D41 /* Build configuration list for PBXProject "OCExpectations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

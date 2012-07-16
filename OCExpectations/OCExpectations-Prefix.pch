@@ -1,7 +1,15 @@
 //
 // Prefix header for all source files of the 'OCExpectations' target in the 'OCExpectations' project
+// Prefix header for all source files of the 'OCExpectationsLib' target in the 'OCExpectationsLib' project
 //
 
 #ifdef __OBJC__
 	#import <Foundation/Foundation.h>
+#endif
+
+#if __has_feature(objc_bool)
+#undef YES
+#undef NO
+#define YES __objc_yes
+#define NO __objc_no
 #endif
