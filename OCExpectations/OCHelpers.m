@@ -1,4 +1,4 @@
-// OCExpectations OCExpectationsTests.m
+// OCExpectations OCHelpers.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,50 +22,14 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCExpectationsTests.h"
+#import "OCHelpers.h"
 
-#import <OCExpectations/OCExpectations.h>
-
-@implementation OCExpectationsTests
-
-- (void)testShouldEqualNoThrow
+NSNumber *OCSpecNotBool(NSNumber *boolOrNil)
 {
-	// 1 + 1 should = 2
-	STAssertNoThrow([@(1 + 1) should:[@2 equal]], nil);
+	return boolOrNil == nil || [boolOrNil boolValue] == NO ? @YES : @NO;
 }
 
-- (void)testShouldEqualThrows
+NSNumber *OCSpecNot(id objectOrNil)
 {
-	// 1 should NOT = 2
-	STAssertThrows([@1 should:[@2 equal]], nil);
+	return objectOrNil == nil || [objectOrNil isKindOfClass:[NSNumber class]] ? OCSpecNotBool(objectOrNil) : @NO;
 }
-
-- (void)testShouldBeTrue
-{
-	STAssertNoThrow([@YES should:[@YES be]], nil);
-	STAssertThrows([@NO should:[@YES be]], nil);
-}
-
-- (void)testShouldBeFalse
-{
-	STAssertNoThrow([@NO should:[@NO be]], nil);
-	STAssertThrows([@YES should:[@NO be]], nil);
-}
-
-- (void)testNot
-{
-	STAssertEqualObjects(OCSpecNot(@NO), @YES, nil);
-	STAssertEqualObjects(OCSpecNot(nil), @YES, nil);
-	
-	// In Ruby, the following would answer false. That is, Ruby expression !0
-	// answers false. However, in Objective-C, @0 equals @NO. They are one and
-	// the same thing: both integer numbers with value of zero. Hence negating
-	// zero equates to negating NO, answering YES.
-	STAssertEqualObjects(OCSpecNot(@0), @YES, nil);
-	
-	// Negating an object, any object, answers NO. Note that in Objective-C,
-	// null is not nil, therefore a non-nil object answering NO.
-	STAssertEqualObjects(OCSpecNot([NSNull null]), @NO, nil);
-}
-
-@end
