@@ -76,4 +76,9 @@
 	STAssertEqualObjects(OCSpecNot(OCSpecNot([NSNull null])), @YES, nil);
 }
 
+- (void)testBeAKindOf
+{
+	STAssertNoThrow([@123 should:[NSStringFromClass([NSNumber class]) beAKindOf]], nil);
+}
+
 @end

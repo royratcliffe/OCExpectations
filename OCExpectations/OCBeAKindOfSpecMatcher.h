@@ -1,4 +1,4 @@
-// OCExpectations NSObject+OCSpecMatchers.m
+// OCExpectations OCBeAKindOfSpecMatcher.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,26 +22,14 @@
 //
 //------------------------------------------------------------------------------
 
-#import "NSObject+OCSpecMatchers.h"
+#import <OCExpectations/OCSpecMatcher.h>
 
-#import "OCEqualSpecMatcher.h"
-#import "OCBeAKindOfSpecMatcher.h"
-
-@implementation NSObject(OCSpecMatchers)
-
-- (OCSpecMatcher *)be
-{
-	return [self equal];
-}
-
-- (OCSpecMatcher *)beAKindOf
-{
-	return [[OCBeAKindOfSpecMatcher alloc] initWithExpected:self];
-}
-
-- (OCSpecMatcher *)equal
-{
-	return [[OCEqualSpecMatcher alloc] initWithExpected:self];
-}
+/*!
+ * @details Be-a-kind-of expectations require that a string-based expected value
+ * represents the class name. You cannot use classes directly simply because
+ * Objective-C classes are not objects in the same sense as regular
+ * objects. They cannot take the place of regular message receivers.
+ */
+@interface OCBeAKindOfSpecMatcher : OCSpecMatcher
 
 @end

@@ -1,4 +1,4 @@
-// OCExpectations NSObject+OCSpecMatchers.m
+// OCExpectations OCBeAKindOfSpecMatcher.m
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -22,26 +22,13 @@
 //
 //------------------------------------------------------------------------------
 
-#import "NSObject+OCSpecMatchers.h"
-
-#import "OCEqualSpecMatcher.h"
 #import "OCBeAKindOfSpecMatcher.h"
 
-@implementation NSObject(OCSpecMatchers)
+@implementation OCBeAKindOfSpecMatcher
 
-- (OCSpecMatcher *)be
+- (id)matches:(id)actual
 {
-	return [self equal];
-}
-
-- (OCSpecMatcher *)beAKindOf
-{
-	return [[OCBeAKindOfSpecMatcher alloc] initWithExpected:self];
-}
-
-- (OCSpecMatcher *)equal
-{
-	return [[OCEqualSpecMatcher alloc] initWithExpected:self];
+	return @([[super matches:actual] isKindOfClass:NSClassFromString(self.expected)]);
 }
 
 @end
