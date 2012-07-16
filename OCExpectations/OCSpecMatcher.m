@@ -46,7 +46,12 @@
 
 - (NSString *)failureMessageForShould
 {
-	return [NSString stringWithFormat:@"expected %@ but got %@", self.expected, self.actual];
+	return [NSString stringWithFormat:@"expected %@ to match %@", self.expected, self.actual];
+}
+
+- (NSString *)failureMessageForShouldNot
+{
+	return [NSString stringWithFormat:@"expected %@ not to match %@", self.expected, self.actual];
 }
 
 @end

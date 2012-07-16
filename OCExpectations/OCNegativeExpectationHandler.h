@@ -1,4 +1,4 @@
-// OCExpectations OCHelpers.h
+// OCExpectations OCNegativeExpectationHandler.h
 //
 // Copyright © 2012, Roy Ratcliffe, Pioneering Software, United Kingdom
 //
@@ -24,20 +24,10 @@
 
 #import <Foundation/Foundation.h>
 
-/*!
- * @brief Negates a boolean or nil; not nil answering YES.
- * @details In Ruby, false equals nil or false. Therefore negating nil answers
- * true just as negating false answers true. Translating this logic to
- * Objective-C, negating NO or nil answers YES; negating YES answers NO. Ignore
- * NSNull for now; although NSNull stands for nil for user interface components.
- */
-NSNumber *OCSpecNotBool(NSNumber *boolOrNil);
+@class OCSpecMatcher;
 
-/*!
- * @brief Negates an object or nil.
- * @details In Ruby, you can also negate arbitrary object references answering
- * false if not nil, true if nil. Imitate this behaviour by negating as a
- * boolean for nil or NSNumbers, but answer NO for any other kind. Treat all
- * NSNumbers as booleans.
- */
-NSNumber *OCSpecNot(id objectOrNil);
+@interface OCNegativeExpectationHandler : NSObject
+
+- (id)handleActual:(id)actual matcher:(OCSpecMatcher *)matcher;
+
+@end

@@ -24,18 +24,35 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol OCSpecMatcher
+
+- (id)initWithExpected:(id)expected;
+
+- (id)matches:(id)actual;
+
+@optional
+
+- (id)doesNotMatch:(id)actual;
+
+- (NSString *)failureMessageForShould;
+- (NSString *)failureMessageForShouldNot;
+
+@end
+
 /*!
  * @brief Matchers compare an expectation with an actual value.
  * @details Used internally as the base matcher class.
  */
-@interface OCSpecMatcher : NSObject
+@interface OCSpecMatcher : NSObject<OCSpecMatcher>
 
 @property(strong, NS_NONATOMIC_IOSONLY) id expected;
 @property(strong, NS_NONATOMIC_IOSONLY) id actual;
 
 - (id)initWithExpected:(id)expected;
+
 - (id)matches:(id)actual;
 
 - (NSString *)failureMessageForShould;
+- (NSString *)failureMessageForShouldNot;
 
 @end

@@ -24,6 +24,7 @@
 
 #import "NSObject+OCExpectations.h"
 #import "OCPositiveExpectationHandler.h"
+#import "OCNegativeExpectationHandler.h"
 
 @implementation NSObject(OCExpectations)
 
@@ -34,7 +35,7 @@
 
 - (id)shouldNot:(OCSpecMatcher *)matcher
 {
-	return nil;
+	return [[[OCNegativeExpectationHandler alloc] init] handleActual:self matcher:matcher];
 }
 
 @end

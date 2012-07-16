@@ -24,6 +24,7 @@
 
 #import "OCPositiveExpectationHandler.h"
 #import "OCSpecMatcher.h"
+#import "OCHelpers.h"
 
 @implementation OCPositiveExpectationHandler
 
@@ -31,7 +32,7 @@
 {
 	// Fails unless the matcher answers YES. Fails therefore if the matcher answers NO or nil.
 	id match = [matcher matches:actual];
-	if (match && [match isKindOfClass:[NSNumber class]] && [(NSNumber *)match boolValue])
+	if ([OCSpecNot(match) boolValue] == NO)
 	{
 		return match;
 	}
