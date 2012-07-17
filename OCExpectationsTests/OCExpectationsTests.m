@@ -31,13 +31,19 @@
 - (void)testShouldEqualNoThrow
 {
 	// 1 + 1 should = 2
-	STAssertNoThrow([@(1 + 1) should:[@2 equal]], nil);
+	STAssertNoThrow([@(1 + 1) should:be(@2)], nil);
 }
 
 - (void)testShouldEqualThrows
 {
 	// 1 should NOT = 2
 	STAssertThrows([@1 should:[@2 equal]], nil);
+}
+
+- (void)testShouldNotEqualNoThrow
+{
+	// 1 should NOT = 2
+	STAssertNoThrow([@1 shouldNot:equal(@2)], nil);
 }
 
 - (void)testShouldBeTrue

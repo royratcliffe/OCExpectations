@@ -38,3 +38,15 @@
 - (id<OCSpecMatcher>)equal;
 
 @end
+
+#ifndef be
+#define be(expected) [(expected) be]
+#endif
+
+#ifndef beAKindOf
+#define beAKindOf(expected) [(expected) beAKindOf]
+#endif
+
+#ifndef equal
+#define equal(expected) [(expected) equal]
+#endif
