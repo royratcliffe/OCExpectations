@@ -18,7 +18,7 @@ in Objective-C. Very similar albeit in a somewhat Shakespearean form of words. O
 
 Does this improve over using C functions and macros for matchers?
 
-Yes with resepect to namespaces. The project could define a pre-processor macro, or function, so that your expectation would read `[@5 should:equal(@5)]` for example. Trouble is, Objective-C has no namespace or module support. The matcher macros would consequently live in the global namespace and potentially clash with other projects including your own. What if your project defines `equal`? Adding a namespace prefix, as is convention, would work around that issue. But `[@5 should:OCSpecEqual(@5)]` looses something in readability.
+Yes with respect to namespaces. The project could define a pre-processor macro, or function, so that your expectation would read `[@5 should:equal(@5)]` for example. Trouble is, Objective-C has no namespace or module support. The matcher macros would consequently live in the global namespace and potentially clash with other projects including your own. What if your project defines `equal`? Adding a namespace prefix, as is convention, would work around that issue. But `[@5 should:OCSpecEqual(@5)]` looses something in readability.
 
 The same applies to some extent with the expectation interface, `-[NSObject should:aMatcher]`. This polutes the `NSObject` space. What if your project defines that method on `NSObject` or one of its subclasses? [Trouble at mill](http://www.urbandictionary.com/define.php?term=trouble%20at%20the%20mill)!
 
