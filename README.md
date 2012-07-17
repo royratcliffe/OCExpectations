@@ -32,6 +32,8 @@ As a compromise, OCExpectations hash-defines a set of corresponding C pre-proces
 
 The above example makes use of the [Objective-C literal](http://clang.llvm.org/docs/ObjectiveCLiterals.html) syntax available in the [LLVM](http://llvm.org/) version 4.0 compiler bundled with Xcode 4.4 and above. You consequently need LLVM version 4.0 as a minimum requirement, as the project source code makes full use of literals and boxed expressions.
 
+### Custom matchers
+
 You can easily expand on the library by adding your own matchers.
 
 ### OC Stands for Objective-C

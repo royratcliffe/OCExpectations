@@ -97,4 +97,11 @@
 	STAssertNoThrow([@5 should:[@5 equal]], nil);
 }
 
+- (void)testVersioning
+{
+	STAssertNotNil(OCExpectationsVersionString(), nil);
+	STAssertTrue(strcmp(@encode(typeof(kOCExpectationsVersionString)), "^C") == 0, nil);
+	STAssertTrue(strcmp(@encode(typeof(kOCExpectationsVersionNumber)), "d") == 0, nil);
+}
+
 @end
