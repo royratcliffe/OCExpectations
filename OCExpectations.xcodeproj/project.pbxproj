@@ -33,6 +33,10 @@
 		7807A31315B4587800E69441 /* OCPositiveExpectationHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78C5D6E515B2941A00CA3D41 /* OCPositiveExpectationHandler.h */; };
 		7807A31415B4587800E69441 /* OCNegativeExpectationHandler.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */; };
 		7807A31515B4587800E69441 /* OCSpecHelpers.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */; };
+		7834617315B843BA00412CAA /* OCExceptions.h in Headers */ = {isa = PBXBuildFile; fileRef = 7834617115B843B900412CAA /* OCExceptions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7834617415B843BA00412CAA /* OCExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7834617215B843B900412CAA /* OCExceptions.m */; };
+		7834617515B843BA00412CAA /* OCExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7834617215B843B900412CAA /* OCExceptions.m */; };
+		7834617715B8443000412CAA /* OCExceptions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7834617115B843B900412CAA /* OCExceptions.h */; };
 		783A48CE15B4689100AD74F7 /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 783A48CC15B4689100AD74F7 /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		783A48CF15B4689100AD74F7 /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A48CD15B4689100AD74F7 /* Versioning.m */; };
 		783A48D015B4689100AD74F7 /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A48CD15B4689100AD74F7 /* Versioning.m */; };
@@ -96,6 +100,7 @@
 				7807A31315B4587800E69441 /* OCPositiveExpectationHandler.h in CopyFiles */,
 				7807A31415B4587800E69441 /* OCNegativeExpectationHandler.h in CopyFiles */,
 				7807A31515B4587800E69441 /* OCSpecHelpers.h in CopyFiles */,
+				7834617715B8443000412CAA /* OCExceptions.h in CopyFiles */,
 				783A48D115B468D600AD74F7 /* Versioning.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -109,6 +114,8 @@
 		7807A2DE15B4542A00E69441 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7807A2EC15B4542A00E69441 /* OCExpectationsLibTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OCExpectationsLibTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7807A2EE15B4542A00E69441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7834617115B843B900412CAA /* OCExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExceptions.h; sourceTree = "<group>"; };
+		7834617215B843B900412CAA /* OCExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExceptions.m; sourceTree = "<group>"; };
 		783A48CC15B4689100AD74F7 /* Versioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Versioning.h; sourceTree = "<group>"; };
 		783A48CD15B4689100AD74F7 /* Versioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Versioning.m; sourceTree = "<group>"; };
 		78AC87F815B3CB400062854A /* OCNegativeExpectationHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCNegativeExpectationHandler.h; sourceTree = "<group>"; };
@@ -248,6 +255,8 @@
 				78AC87F915B3CB400062854A /* OCNegativeExpectationHandler.m */,
 				78AC87FD15B3D9F30062854A /* OCSpecHelpers.h */,
 				78AC87FE15B3D9F30062854A /* OCSpecHelpers.m */,
+				7834617115B843B900412CAA /* OCExceptions.h */,
+				7834617215B843B900412CAA /* OCExceptions.m */,
 				78C5D6B315B2858B00CA3D41 /* Supporting Files */,
 			);
 			path = OCExpectations;
@@ -302,6 +311,7 @@
 				78C49B6115B42F3100758C9D /* OCSpecBeAKindOfMatcher.h in Headers */,
 				7807A2CE15B447E100E69441 /* OCSpecBaseMatcher.h in Headers */,
 				783A48CE15B4689100AD74F7 /* Versioning.h in Headers */,
+				7834617315B843BA00412CAA /* OCExceptions.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -478,6 +488,7 @@
 				7807A30915B454E300E69441 /* OCSpecBaseMatcher.m in Sources */,
 				7807A30A15B454EB00E69441 /* NSObject+OCSpecMatchers.m in Sources */,
 				7807A30B15B454EF00E69441 /* NSObject+OCExpectations.m in Sources */,
+				7834617515B843BA00412CAA /* OCExceptions.m in Sources */,
 				783A48D015B4689100AD74F7 /* Versioning.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -503,6 +514,7 @@
 				78C49B6215B42F3100758C9D /* OCSpecBeAKindOfMatcher.m in Sources */,
 				7807A2CF15B447E100E69441 /* OCSpecBaseMatcher.m in Sources */,
 				783A48CF15B4689100AD74F7 /* Versioning.m in Sources */,
+				7834617415B843BA00412CAA /* OCExceptions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

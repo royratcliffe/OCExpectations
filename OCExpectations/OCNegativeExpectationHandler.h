@@ -26,6 +26,9 @@
 
 @protocol OCSpecMatcher;
 
+/*!
+ * @brief Handles negative expectations.
+ */
 @interface OCNegativeExpectationHandler : NSObject
 
 - (id)handleActual:(id)actual matcher:(id<OCSpecMatcher>)matcher;

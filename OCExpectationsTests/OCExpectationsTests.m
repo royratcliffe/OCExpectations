@@ -97,6 +97,15 @@
 	STAssertNoThrow([@5 should:[@5 equal]], nil);
 }
 
+- (void)testExpectationNotMetException
+{
+	// When an expectation fails, it throws an NSException named
+	// OCExpectationNotMetException. Make sure that that proves true. Give it
+	// something that will always fail: one divided by three should never be
+	// 0.333; not unless the floating-point unit has very, very low precision.
+	STAssertThrowsSpecificNamed([@(1/3.0) should:be(@0.333)], NSException, OCExpectationNotMetException, nil);
+}
+
 - (void)testVersioning
 {
 	STAssertNotNil(OCExpectationsVersionString(), nil);

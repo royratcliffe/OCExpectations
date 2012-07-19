@@ -1,4 +1,4 @@
-// OCExpectations OCPositiveExpectationHandler.h
+// OCExpectations OCExceptions.h
 //
 // Copyright © 2012, The OCCukes Organisation. All rights reserved.
 //
@@ -24,17 +24,4 @@
 
 #import <Foundation/Foundation.h>
 
-@protocol OCSpecMatcher;
-
-/*!
- * @brief Handles positive expectations.
- */
-@interface OCPositiveExpectationHandler : NSObject
-
-/*!
- * @exception NSException When an expectation fails, it throws an NSException
- * named OCExpectationNotMetException.
- */
-- (id)handleActual:(id)actual matcher:(id<OCSpecMatcher>)matcher;
-
-@end
+extern NSString *const OCExpectationNotMetException;

@@ -25,6 +25,7 @@
 #import "OCNegativeExpectationHandler.h"
 #import "OCSpecMatcher.h"
 #import "OCSpecHelpers.h"
+#import "OCExceptions.h"
 
 @implementation OCNegativeExpectationHandler
 
@@ -35,7 +36,7 @@
 	{
 		return match;
 	}
-	[[NSException exceptionWithName:@"OCExpectationNotMetError" reason:[matcher failureMessageForShouldNot] userInfo:nil] raise];
+	[[NSException exceptionWithName:OCExpectationNotMetException reason:[matcher failureMessageForShouldNot] userInfo:nil] raise];
 	return nil;
 }
 
