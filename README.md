@@ -1,4 +1,4 @@
-# Objective-C Expectations
+# ![Cucumber Roll](http://files.softicons.com/download/object-icons/richs-misc-icons-by-rich-d/png/24/Cucumber%20Roll.png) Objective-C Expectations
 
 The OCExpectations project provides a library of Objective-C expectation matchers styled after [RSpec](http://rspec.info/) expectations. Expressing an expectation in Ruby RSpec as
 
