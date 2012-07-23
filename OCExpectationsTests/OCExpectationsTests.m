@@ -108,14 +108,14 @@
 
 - (void)testYesShouldBeTrueNotFalse
 {
-	[@YES should:be_true];
-	[@YES shouldNot:be_false];
+	STAssertNoThrow([@YES should:be_true], nil);
+	STAssertNoThrow([@YES shouldNot:be_false], nil);
 }
 
 - (void)testNoShouldBeFalseNotTrue
 {
-	[@NO should:be_false];
-	[@NO shouldNot:be_true];
+	STAssertNoThrow([@NO should:be_false], nil);
+	STAssertNoThrow([@NO shouldNot:be_true], nil);
 }
 
 - (void)testNilShouldBeNil
@@ -124,7 +124,8 @@
 	// should:aMatcher] using a literal nil fails at compile time: a "void *"
 	// bad receiver type. However, you really can send to nil. You only have to
 	// cast the nil to an id, that is, send [(id)nil should:aMatcher].
-	[(id)nil should:be_nil];
+	STAssertNoThrow([(id)nil should:be_nil], nil);
+}
 
 - (void)testEqlVersusEqual
 {
