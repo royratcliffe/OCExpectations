@@ -33,18 +33,41 @@
  */
 @interface NSObject(OCSpecMatchers)
 
++ (id<OCSpecMatcher>)beTrue;
++ (id<OCSpecMatcher>)beFalse;
++ (id<OCSpecMatcher>)beNil;
+
 - (id<OCSpecMatcher>)be;
 - (id<OCSpecMatcher>)beAKindOf;
 - (id<OCSpecMatcher>)equal;
 
 @end
 
+/*
+ * Macros use the underscore rather than camel-case delimiter style. This by
+ * design because the matcher method extensions use camel-case. Clashes could
+ * result if both use the same style. The C pre-processor operates on all
+ * tokens, including Objective-C method names.
+ */
+
+#ifndef be_true
+#define be_true [NSObject beTrue]
+#endif
+
+#ifndef be_false
+#define be_false [NSObject beFalse]
+#endif
+
+#ifndef be_nil
+#define be_nil [NSObject beNil]
+#endif
+
 #ifndef be
 #define be(expected) [(expected) be]
 #endif
 
-#ifndef beAKindOf
-#define beAKindOf(expected) [(expected) beAKindOf]
+#ifndef be_a_kind_of
+#define be_a_kind_of(expected) [(expected) beAKindOf]
 #endif
 
 #ifndef equal

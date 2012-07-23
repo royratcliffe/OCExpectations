@@ -106,6 +106,27 @@
 	STAssertThrowsSpecificNamed([@(1/3.0) should:be(@0.333)], NSException, OCExpectationNotMetException, nil);
 }
 
+- (void)testYesShouldBeTrueNotFalse
+{
+	[@YES should:be_true];
+	[@YES shouldNot:be_false];
+}
+
+- (void)testNoShouldBeFalseNotTrue
+{
+	[@NO should:be_false];
+	[@NO shouldNot:be_true];
+}
+
+- (void)testNilShouldBeNil
+{
+	// In Objective-C, you cannot send messages to the nil literal. Sending [nil
+	// should:aMatcher] using a literal nil fails at compile time: a "void *"
+	// bad receiver type. However, you really can send to nil. You only have to
+	// cast the nil to an id, that is, send [(id)nil should:aMatcher].
+	[(id)nil should:be_nil];
+}
+
 - (void)testVersioning
 {
 	STAssertNotNil(OCExpectationsVersionString(), nil);

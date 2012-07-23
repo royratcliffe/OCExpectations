@@ -64,6 +64,18 @@
 		78C5D6EC15B296B900CA3D41 /* OCExpectations.h in Headers */ = {isa = PBXBuildFile; fileRef = 78C5D6EB15B296B900CA3D41 /* OCExpectations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78D1C1F515B32DB20059BF0A /* NSObject+OCSpecMatchers.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D1C1F315B32DB20059BF0A /* NSObject+OCSpecMatchers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78D1C1F615B32DB20059BF0A /* NSObject+OCSpecMatchers.m in Sources */ = {isa = PBXBuildFile; fileRef = 78D1C1F415B32DB20059BF0A /* NSObject+OCSpecMatchers.m */; };
+		78E3581815BD987700824B6E /* OCSpecTrueMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78E3581615BD987700824B6E /* OCSpecTrueMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78E3581915BD987700824B6E /* OCSpecTrueMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E3581715BD987700824B6E /* OCSpecTrueMatcher.m */; };
+		78E3581A15BD987700824B6E /* OCSpecTrueMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E3581715BD987700824B6E /* OCSpecTrueMatcher.m */; };
+		78E3581E15BD9A6300824B6E /* OCSpecFalseMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78E3581C15BD9A6300824B6E /* OCSpecFalseMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78E3581F15BD9A6300824B6E /* OCSpecFalseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E3581D15BD9A6300824B6E /* OCSpecFalseMatcher.m */; };
+		78E3582015BD9A6300824B6E /* OCSpecFalseMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E3581D15BD9A6300824B6E /* OCSpecFalseMatcher.m */; };
+		78E3582315BD9A7400824B6E /* OCSpecNilMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78E3582115BD9A7400824B6E /* OCSpecNilMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78E3582415BD9A7400824B6E /* OCSpecNilMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E3582215BD9A7400824B6E /* OCSpecNilMatcher.m */; };
+		78E3582515BD9A7400824B6E /* OCSpecNilMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E3582215BD9A7400824B6E /* OCSpecNilMatcher.m */; };
+		78E3582615BD9B2600824B6E /* OCSpecTrueMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78E3581615BD987700824B6E /* OCSpecTrueMatcher.h */; };
+		78E3582715BD9B2600824B6E /* OCSpecFalseMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78E3581C15BD9A6300824B6E /* OCSpecFalseMatcher.h */; };
+		78E3582815BD9B2600824B6E /* OCSpecNilMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78E3582115BD9A7400824B6E /* OCSpecNilMatcher.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +105,9 @@
 				7807A30C15B4587800E69441 /* OCExpectations.h in CopyFiles */,
 				7807A30D15B4587800E69441 /* NSObject+OCExpectations.h in CopyFiles */,
 				7807A30E15B4587800E69441 /* NSObject+OCSpecMatchers.h in CopyFiles */,
+				78E3582615BD9B2600824B6E /* OCSpecTrueMatcher.h in CopyFiles */,
+				78E3582715BD9B2600824B6E /* OCSpecFalseMatcher.h in CopyFiles */,
+				78E3582815BD9B2600824B6E /* OCSpecNilMatcher.h in CopyFiles */,
 				7807A30F15B4587800E69441 /* OCSpecMatcher.h in CopyFiles */,
 				7807A31015B4587800E69441 /* OCSpecBaseMatcher.h in CopyFiles */,
 				7807A31115B4587800E69441 /* OCSpecEqualMatcher.h in CopyFiles */,
@@ -148,6 +163,12 @@
 		78C5D6EB15B296B900CA3D41 /* OCExpectations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExpectations.h; sourceTree = "<group>"; };
 		78D1C1F315B32DB20059BF0A /* NSObject+OCSpecMatchers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+OCSpecMatchers.h"; sourceTree = "<group>"; };
 		78D1C1F415B32DB20059BF0A /* NSObject+OCSpecMatchers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+OCSpecMatchers.m"; sourceTree = "<group>"; };
+		78E3581615BD987700824B6E /* OCSpecTrueMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecTrueMatcher.h; sourceTree = "<group>"; };
+		78E3581715BD987700824B6E /* OCSpecTrueMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecTrueMatcher.m; sourceTree = "<group>"; };
+		78E3581C15BD9A6300824B6E /* OCSpecFalseMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecFalseMatcher.h; sourceTree = "<group>"; };
+		78E3581D15BD9A6300824B6E /* OCSpecFalseMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecFalseMatcher.m; sourceTree = "<group>"; };
+		78E3582115BD9A7400824B6E /* OCSpecNilMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecNilMatcher.h; sourceTree = "<group>"; };
+		78E3582215BD9A7400824B6E /* OCSpecNilMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecNilMatcher.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -245,6 +266,12 @@
 				78C5D6DD15B28D3200CA3D41 /* OCSpecMatcher.h */,
 				7807A2CC15B447E100E69441 /* OCSpecBaseMatcher.h */,
 				7807A2CD15B447E100E69441 /* OCSpecBaseMatcher.m */,
+				78E3581615BD987700824B6E /* OCSpecTrueMatcher.h */,
+				78E3581715BD987700824B6E /* OCSpecTrueMatcher.m */,
+				78E3581C15BD9A6300824B6E /* OCSpecFalseMatcher.h */,
+				78E3581D15BD9A6300824B6E /* OCSpecFalseMatcher.m */,
+				78E3582115BD9A7400824B6E /* OCSpecNilMatcher.h */,
+				78E3582215BD9A7400824B6E /* OCSpecNilMatcher.m */,
 				78C5D6E115B2910D00CA3D41 /* OCSpecEqualMatcher.h */,
 				78C5D6E215B2910D00CA3D41 /* OCSpecEqualMatcher.m */,
 				78C49B5F15B42F3100758C9D /* OCSpecBeAKindOfMatcher.h */,
@@ -312,6 +339,9 @@
 				7807A2CE15B447E100E69441 /* OCSpecBaseMatcher.h in Headers */,
 				783A48CE15B4689100AD74F7 /* Versioning.h in Headers */,
 				7834617315B843BA00412CAA /* OCExceptions.h in Headers */,
+				78E3581815BD987700824B6E /* OCSpecTrueMatcher.h in Headers */,
+				78E3581E15BD9A6300824B6E /* OCSpecFalseMatcher.h in Headers */,
+				78E3582315BD9A7400824B6E /* OCSpecNilMatcher.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -498,14 +528,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7807A30415B454C400E69441 /* OCSpecHelpers.m in Sources */,
-				7807A30515B454C800E69441 /* OCNegativeExpectationHandler.m in Sources */,
-				7807A30615B454D100E69441 /* OCPositiveExpectationHandler.m in Sources */,
-				7807A30715B454DC00E69441 /* OCSpecBeAKindOfMatcher.m in Sources */,
-				7807A30815B454E100E69441 /* OCSpecEqualMatcher.m in Sources */,
-				7807A30915B454E300E69441 /* OCSpecBaseMatcher.m in Sources */,
-				7807A30A15B454EB00E69441 /* NSObject+OCSpecMatchers.m in Sources */,
 				7807A30B15B454EF00E69441 /* NSObject+OCExpectations.m in Sources */,
+				7807A30A15B454EB00E69441 /* NSObject+OCSpecMatchers.m in Sources */,
+				7807A30915B454E300E69441 /* OCSpecBaseMatcher.m in Sources */,
+				78E3581A15BD987700824B6E /* OCSpecTrueMatcher.m in Sources */,
+				78E3582015BD9A6300824B6E /* OCSpecFalseMatcher.m in Sources */,
+				78E3582515BD9A7400824B6E /* OCSpecNilMatcher.m in Sources */,
+				7807A30815B454E100E69441 /* OCSpecEqualMatcher.m in Sources */,
+				7807A30715B454DC00E69441 /* OCSpecBeAKindOfMatcher.m in Sources */,
+				7807A30615B454D100E69441 /* OCPositiveExpectationHandler.m in Sources */,
+				7807A30515B454C800E69441 /* OCNegativeExpectationHandler.m in Sources */,
+				7807A30415B454C400E69441 /* OCSpecHelpers.m in Sources */,
 				7834617515B843BA00412CAA /* OCExceptions.m in Sources */,
 				783A48D015B4689100AD74F7 /* Versioning.m in Sources */,
 			);
@@ -533,6 +566,9 @@
 				7807A2CF15B447E100E69441 /* OCSpecBaseMatcher.m in Sources */,
 				783A48CF15B4689100AD74F7 /* Versioning.m in Sources */,
 				7834617415B843BA00412CAA /* OCExceptions.m in Sources */,
+				78E3581915BD987700824B6E /* OCSpecTrueMatcher.m in Sources */,
+				78E3581F15BD9A6300824B6E /* OCSpecFalseMatcher.m in Sources */,
+				78E3582415BD9A7400824B6E /* OCSpecNilMatcher.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -821,6 +857,7 @@
 				7834618615B84F8D00412CAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		78C5D6A215B2858B00CA3D41 /* Build configuration list for PBXProject "OCExpectations" */ = {
 			isa = XCConfigurationList;
