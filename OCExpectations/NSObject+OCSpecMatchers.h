@@ -38,9 +38,9 @@
 + (id<OCSpecMatcher>)beNil;
 
 - (id<OCSpecMatcher>)be;
-- (id<OCSpecMatcher>)beAKindOf;
 - (id<OCSpecMatcher>)equal;
 - (id<OCSpecMatcher>)eql;
+- (id<OCSpecMatcher>)beAKindOf;
 
 @end
 
