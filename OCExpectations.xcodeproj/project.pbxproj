@@ -79,6 +79,7 @@
 		78ED360815BDB298007D00E1 /* OCSpecEqlMatcher.h in Headers */ = {isa = PBXBuildFile; fileRef = 78ED360615BDB298007D00E1 /* OCSpecEqlMatcher.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		78ED360915BDB298007D00E1 /* OCSpecEqlMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78ED360715BDB298007D00E1 /* OCSpecEqlMatcher.m */; };
 		78ED360A15BDB298007D00E1 /* OCSpecEqlMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78ED360715BDB298007D00E1 /* OCSpecEqlMatcher.m */; };
+		78ED362715BDC583007D00E1 /* OCSpecEqlMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78ED360615BDB298007D00E1 /* OCSpecEqlMatcher.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -114,6 +115,7 @@
 				7807A30F15B4587800E69441 /* OCSpecMatcher.h in CopyFiles */,
 				7807A31015B4587800E69441 /* OCSpecBaseMatcher.h in CopyFiles */,
 				7807A31115B4587800E69441 /* OCSpecEqualMatcher.h in CopyFiles */,
+				78ED362715BDC583007D00E1 /* OCSpecEqlMatcher.h in CopyFiles */,
 				7807A31215B4587800E69441 /* OCSpecBeAKindOfMatcher.h in CopyFiles */,
 				7807A31315B4587800E69441 /* OCPositiveExpectationHandler.h in CopyFiles */,
 				7807A31415B4587800E69441 /* OCNegativeExpectationHandler.h in CopyFiles */,
