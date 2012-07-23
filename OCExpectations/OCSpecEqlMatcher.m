@@ -1,4 +1,4 @@
-// OCExpectations NSObject+OCSpecMatchers.m
+// OCExpectations OCSpecEqlMatcher.m
 //
 // Copyright © 2012, The OCCukes Organisation. All rights reserved.
 //
@@ -22,49 +22,13 @@
 //
 //------------------------------------------------------------------------------
 
-#import "NSObject+OCSpecMatchers.h"
+#import "OCSpecEqlMatcher.h"
 
-#import "OCSpecTrueMatcher.h"
-#import "OCSpecFalseMatcher.h"
-#import "OCSpecNilMatcher.h"
-#import "OCSpecEqualMatcher.h"
-#import "OCSpecBeAKindOfMatcher.h"
+@implementation OCSpecEqlMatcher
 
-@implementation NSObject(OCSpecMatchers)
-
-+ (id<OCSpecMatcher>)beTrue
+- (id)matches:(id)actual
 {
-	return [[OCSpecTrueMatcher alloc] initWithExpected:nil];
-}
-
-+ (id<OCSpecMatcher>)beFalse
-{
-	return [[OCSpecFalseMatcher alloc] initWithExpected:nil];
-}
-
-+ (id<OCSpecMatcher>)beNil
-{
-	return [[OCSpecNilMatcher alloc] initWithExpected:nil];
-}
-
-- (id<OCSpecMatcher>)be
-{
-	return [self equal];
-}
-
-- (id<OCSpecMatcher>)equal
-{
-	return [[OCSpecEqualMatcher alloc] initWithExpected:self];
-}
-
-- (id<OCSpecMatcher>)eql
-{
-	return [[OCSpecEqlMatcher alloc] initWithExpected:self];
-}
-
-- (id<OCSpecMatcher>)beAKindOf
-{
-	return [[OCSpecBeAKindOfMatcher alloc] initWithExpected:self];
+	return @(actual == self.expected);
 }
 
 @end

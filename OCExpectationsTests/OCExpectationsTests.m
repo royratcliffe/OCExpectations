@@ -125,6 +125,26 @@
 	// bad receiver type. However, you really can send to nil. You only have to
 	// cast the nil to an id, that is, send [(id)nil should:aMatcher].
 	[(id)nil should:be_nil];
+
+- (void)testEqlVersusEqual
+{
+	STAssertNoThrow([@"hello" should:equal(@"hello")], nil);
+	
+	// You might expect the following to not throw. However, it throws. Due to
+	// clever compiler optimisations, the two strings share the same
+	// identity. Strings in Apple's Foundation frameworks are immutable
+	// atoms. Sharing an identity is normal and expected.
+	//
+	//	STAssertNoThrow([@"hello" shouldNot:eql(@"hello")], nil);
+	//
+	STAssertThrows([@"hello" shouldNot:eql(@"hello")], nil);
+	
+	// Work around compiler optimisations and warnings by constructing a string
+	// from a C string. That will create two equal but non-identical
+	// strings. They should compare equal but should not be identical.
+	NSString *hello = [NSString stringWithCString:"hello" encoding:NSUTF8StringEncoding];
+	STAssertNoThrow([hello shouldNot:eql(@"hello")], nil);
+	STAssertNoThrow([hello should:equal(@"hello")], nil);
 }
 
 - (void)testVersioning

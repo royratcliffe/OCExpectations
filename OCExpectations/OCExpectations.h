@@ -30,6 +30,7 @@
 #import <OCExpectations/OCSpecFalseMatcher.h>
 #import <OCExpectations/OCSpecNilMatcher.h>
 #import <OCExpectations/OCSpecEqualMatcher.h>
+#import <OCExpectations/OCSpecEqlMatcher.h>
 #import <OCExpectations/OCSpecBeAKindOfMatcher.h>
 #import <OCExpectations/OCPositiveExpectationHandler.h>
 #import <OCExpectations/OCNegativeExpectationHandler.h>
