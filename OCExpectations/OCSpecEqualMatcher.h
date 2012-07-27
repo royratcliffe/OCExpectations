@@ -26,9 +26,9 @@
 
 /*!
  * @details Equal matching has Objective-C semantics, not Ruby semantics. In
- * other words, although in Ruby @code "5".should_not equal("5") @endcode, not so in
- * Objective-C. @code [@"5" should:[@"5" equal]] @endcode because the equal matcher sends
- * @code -[NSObject isEqual:] @endcode. The @c isEqual:anObject method belongs to the standard
+ * other words, although in Ruby `"5".should_not equal("5")`, not so in
+ * Objective-C. `[@"5" should:[@"5" equal]]` because the equal matcher sends
+ * `-[NSObject isEqual:]`. The `isEqual:anObject` method belongs to the standard
  * NSObject protocol where equality does not mean equal identity. Rather, it
  * means equal value.
  */
