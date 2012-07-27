@@ -52,6 +52,11 @@
 	return [self equal];
 }
 
+- (id<OCSpecMatcher>)beAKindOf
+{
+	return [[OCSpecBeAKindOfMatcher alloc] initWithExpected:self];
+}
+
 - (id<OCSpecMatcher>)equal
 {
 	return [[OCSpecEqualMatcher alloc] initWithExpected:self];
@@ -60,11 +65,6 @@
 - (id<OCSpecMatcher>)eql
 {
 	return [[OCSpecEqlMatcher alloc] initWithExpected:self];
-}
-
-- (id<OCSpecMatcher>)beAKindOf
-{
-	return [[OCSpecBeAKindOfMatcher alloc] initWithExpected:self];
 }
 
 @end
