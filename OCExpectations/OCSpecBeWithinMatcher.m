@@ -43,6 +43,10 @@
 
 - (id)matches:(id)actual
 {
+	if (self.expected == nil)
+	{
+		[NSException raise:NSInvalidArgumentException format:@"You must set an expected value using -of:expected, i.e. [be_within(@%@) of:@expected]", self.delta];
+	}
 	return @(fabs([[super matches:actual] doubleValue] - [self.expected doubleValue]) <= [self.delta doubleValue]);
 }
 

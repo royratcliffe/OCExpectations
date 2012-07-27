@@ -160,6 +160,7 @@
 	STAssertNoThrow([@3.5 should:[be_within(@0.5) of:@3.0]], nil);
 	STAssertThrows([@1.5 should:[be_within(@0.5) of:@3.0]], nil);
 	STAssertThrows([@4.5 should:[be_within(@0.5) of:@3.0]], nil);
+	STAssertThrowsSpecificNamed([@3.0 should:be_within(@0.5)], NSException, NSInvalidArgumentException, nil);
 }
 
 - (void)testVersioning
