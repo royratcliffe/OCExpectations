@@ -28,7 +28,7 @@
 
 - (id)matches:(id)actual
 {
-	return OCSpecNot(OCSpecNot(actual));
+	return OCSpecNot(OCSpecNot([super matches:actual]));
 }
 
 @end

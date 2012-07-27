@@ -28,7 +28,7 @@
 
 - (id)matches:(id)actual
 {
-	return @(actual == nil);
+	return @([super matches:actual] == nil);
 }
 
 @end

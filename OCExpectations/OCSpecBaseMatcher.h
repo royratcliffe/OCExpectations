@@ -35,6 +35,12 @@
 
 - (id)initWithExpected:(id)expected;
 
+/*!
+ * @brief Answers `@YES` if actual matches expected; `@NO` otherwise.
+ * @details When overriding `-matches:actual`, always invoke `-[super
+ * matches:actual]` so that the matcher captures the actual. The matcher needs
+ * this in order to provide failure messages which include the actual value.
+ */
 - (id)matches:(id)actual;
 
 - (NSString *)failureMessageForShould;
