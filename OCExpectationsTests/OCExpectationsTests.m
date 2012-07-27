@@ -163,6 +163,42 @@
 	STAssertThrowsSpecificNamed([@3.0 should:be_within(@0.5)], NSException, NSInvalidArgumentException, nil);
 }
 
+- (void)testIncludes
+{
+	// Preprocessor macros do not play nicely with Objective-C array and
+	// dictionary literals. The compiler complains about "too many arguments
+	// provided to function-like macro invocation." Non-collection literals work
+	// without problems. Catch the exceptions without using the macros until the
+	// LLVM project resolves this compiler issue. For example, use
+	//
+	//	[@[@1, @2, @3] should:[@[@1, @2] include]];
+	//
+	// instead of
+	//
+	//	[@[@1, @2, @3] should:include(@[@1, @2])];
+	//
+	@try
+	{
+		// arrays
+		[@[@1, @2, @3] should:include(@2)];
+		[@[@1, @2, @3] should:[@[@1, @2] include]];
+		
+		// hashes
+		[@{@"alpha": @1, @"beta": @2, @"gamma": @3} should:include(@"beta")];
+		[@{@"alpha": @1, @"beta": @2, @"gamma": @3} should:[@[@"beta", @"gamma"] include]];
+		[@{@"alpha": @1, @"beta": @2, @"gamma": @3} should:[@{@"beta": @2, @"gamma": @3} include]];
+		
+		// The following expectation passes because 1, 1 is a subset of 1. The
+		// includes matcher converts actuals and expected's to sets before
+		// answering. Array 1, 1 becomes set 1; 1 is one and the same object.
+		[@1 should:[@[@1, @1] include]];
+	}
+	@catch (NSException *exception)
+	{
+		[self failWithException:exception];
+	}
+}
+
 - (void)testVersioning
 {
 	STAssertNotNil(OCExpectationsVersionString(), nil);

@@ -51,6 +51,8 @@
 - (id<OCSpecMatcher>)equal;
 - (id<OCSpecMatcher>)eql;
 
+- (id<OCSpecMatcher>)include;
+
 @end
 
 /*
@@ -110,4 +112,8 @@
 
 #ifndef eql
 #define eql(expected) [(expected) eql]
+#endif
+
+#ifndef include
+#define include(expected) [(expected) include]
 #endif

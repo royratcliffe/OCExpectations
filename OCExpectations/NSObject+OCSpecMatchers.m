@@ -31,6 +31,7 @@
 #import "OCSpecBeAKindOfMatcher.h"
 #import "OCSpecBeWithinMatcher.h"
 #import "OCSpecEqualMatcher.h"
+#import "OCSpecIncludeMatcher.h"
 
 @implementation NSObject(OCSpecMatchers)
 
@@ -105,6 +106,11 @@
 - (id<OCSpecMatcher>)eql
 {
 	return [[OCSpecEqlMatcher alloc] initWithExpected:self];
+}
+
+- (id<OCSpecMatcher>)include
+{
+	return [[OCSpecIncludeMatcher alloc] initWithExpected:self];
 }
 
 @end
