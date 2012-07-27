@@ -368,17 +368,17 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXLegacyTarget section */
-		7834618315B84F8D00412CAA /* OCExceptionsPages */ = {
+		7834618315B84F8D00412CAA /* OCExpectationsPages */ = {
 			isa = PBXLegacyTarget;
 			buildArgumentsString = "-c \"$HOME/.rvm/bin/rvm-auto-ruby -r XcodePages -e XcodePages.doxygen_docset_install\"";
-			buildConfigurationList = 7834618415B84F8D00412CAA /* Build configuration list for PBXLegacyTarget "OCExceptionsPages" */;
+			buildConfigurationList = 7834618415B84F8D00412CAA /* Build configuration list for PBXLegacyTarget "OCExpectationsPages" */;
 			buildPhases = (
 			);
 			buildToolPath = /bin/sh;
 			buildWorkingDirectory = "";
 			dependencies = (
 			);
-			name = OCExceptionsPages;
+			name = OCExpectationsPages;
 			passBuildSettingsInEnvironment = 1;
 			productName = OCExceptionsPages;
 		};
@@ -483,7 +483,7 @@
 				78C5D6C015B2858B00CA3D41 /* OCExpectationsTests */,
 				7807A2DC15B4542A00E69441 /* OCExpectationsLib */,
 				7807A2EB15B4542A00E69441 /* OCExpectationsLibTests */,
-				7834618315B84F8D00412CAA /* OCExceptionsPages */,
+				7834618315B84F8D00412CAA /* OCExpectationsPages */,
 			);
 		};
 /* End PBXProject section */
@@ -874,7 +874,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7834618415B84F8D00412CAA /* Build configuration list for PBXLegacyTarget "OCExceptionsPages" */ = {
+		7834618415B84F8D00412CAA /* Build configuration list for PBXLegacyTarget "OCExpectationsPages" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7834618515B84F8D00412CAA /* Debug */,
