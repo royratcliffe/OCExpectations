@@ -154,6 +154,14 @@
 	STAssertNoThrow([hello should:equal(@"hello")], nil);
 }
 
+- (void)testBeWithin
+{
+	STAssertNoThrow([@2.5 should:[be_within(@0.5) of:@3.0]], nil);
+	STAssertNoThrow([@3.5 should:[be_within(@0.5) of:@3.0]], nil);
+	STAssertThrows([@1.5 should:[be_within(@0.5) of:@3.0]], nil);
+	STAssertThrows([@4.5 should:[be_within(@0.5) of:@3.0]], nil);
+}
+
 - (void)testVersioning
 {
 	STAssertNotNil(OCExpectationsVersionString(), nil);

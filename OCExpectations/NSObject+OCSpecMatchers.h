@@ -26,6 +26,8 @@
 
 @protocol OCSpecMatcher;
 
+@class OCSpecBeWithinMatcher;
+
 /*!
  * To obtain a matcher, send one of the following messages to the expected
  * value. The expected value must always be an object. With LLVM 4.0, you can
@@ -44,6 +46,7 @@
 - (id<OCSpecMatcher>)beInstanceOf;
 - (id<OCSpecMatcher>)beAKindOf;
 - (id<OCSpecMatcher>)beKindOf;
+- (OCSpecBeWithinMatcher *)beWithin;
 
 - (id<OCSpecMatcher>)equal;
 - (id<OCSpecMatcher>)eql;
@@ -95,6 +98,10 @@
 
 #ifndef be_kind_of
 #define be_kind_of(expected) [(expected) beKindOf]
+#endif
+
+#ifndef be_within
+#define be_within(expected) [(expected) beWithin]
 #endif
 
 #ifndef equal

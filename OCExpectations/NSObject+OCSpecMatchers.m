@@ -29,6 +29,7 @@
 #import "OCSpecNilMatcher.h"
 #import "OCSpecBeAnInstanceOfMatcher.h"
 #import "OCSpecBeAKindOfMatcher.h"
+#import "OCSpecBeWithinMatcher.h"
 #import "OCSpecEqualMatcher.h"
 
 @implementation NSObject(OCSpecMatchers)
@@ -85,6 +86,11 @@
 - (id<OCSpecMatcher>)beKindOf
 {
 	return [self beAKindOf];
+}
+
+- (OCSpecBeWithinMatcher *)beWithin
+{
+	return [[OCSpecBeWithinMatcher alloc] initWithExpected:self];
 }
 
 //------------------------------------------------------------------------------

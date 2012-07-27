@@ -31,6 +31,7 @@
 #import <OCExpectations/OCSpecNilMatcher.h>
 #import <OCExpectations/OCSpecBeAnInstanceOfMatcher.h>
 #import <OCExpectations/OCSpecBeAKindOfMatcher.h>
+#import <OCExpectations/OCSpecBeWithinMatcher.h>
 #import <OCExpectations/OCSpecEqualMatcher.h>
 #import <OCExpectations/OCSpecEqlMatcher.h>
 #import <OCExpectations/OCPositiveExpectationHandler.h>
