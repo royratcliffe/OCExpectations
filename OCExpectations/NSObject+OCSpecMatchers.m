@@ -31,6 +31,7 @@
 #import "OCSpecBeAKindOfMatcher.h"
 #import "OCSpecBeWithinMatcher.h"
 #import "OCSpecEqualMatcher.h"
+#import "OCSpecEqlMatcher.h"
 #import "OCSpecIncludeMatcher.h"
 
 @implementation NSObject(OCSpecMatchers)
