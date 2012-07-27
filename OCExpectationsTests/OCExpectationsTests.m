@@ -86,6 +86,12 @@
 	STAssertEqualObjects(OCSpecNot(OCSpecNot([NSNull null])), @YES, nil);
 }
 
+- (void)testBeAnInstanceOf
+{
+	NSObject *object = [[NSObject alloc] init];
+	STAssertNoThrow([object should:be_an_instance_of(@"NSObject")], nil);
+}
+
 - (void)testBeAKindOf
 {
 	STAssertNoThrow([@123 should:[NSStringFromClass([NSNumber class]) beAKindOf]], nil);

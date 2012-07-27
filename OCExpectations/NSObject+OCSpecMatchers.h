@@ -40,7 +40,10 @@
 - (id<OCSpecMatcher>)be;
 - (id<OCSpecMatcher>)beA;
 - (id<OCSpecMatcher>)beAn;
+- (id<OCSpecMatcher>)beAnInstanceOf;
+- (id<OCSpecMatcher>)beInstanceOf;
 - (id<OCSpecMatcher>)beAKindOf;
+- (id<OCSpecMatcher>)beKindOf;
 
 - (id<OCSpecMatcher>)equal;
 - (id<OCSpecMatcher>)eql;
@@ -78,8 +81,20 @@
 #define be_an(expected) [(expected) beAn]
 #endif
 
+#ifndef be_an_instance_of
+#define be_an_instance_of(expected) [(expected) beAnInstanceOf]
+#endif
+
+#ifndef be_instance_of
+#define be_instance_of(expected) [(expected) beInstanceOf]
+#endif
+
 #ifndef be_a_kind_of
 #define be_a_kind_of(expected) [(expected) beAKindOf]
+#endif
+
+#ifndef be_kind_of
+#define be_kind_of(expected) [(expected) beKindOf]
 #endif
 
 #ifndef equal

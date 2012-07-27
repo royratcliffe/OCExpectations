@@ -27,8 +27,9 @@
 #import "OCSpecTrueMatcher.h"
 #import "OCSpecFalseMatcher.h"
 #import "OCSpecNilMatcher.h"
-#import "OCSpecEqualMatcher.h"
+#import "OCSpecBeAnInstanceOfMatcher.h"
 #import "OCSpecBeAKindOfMatcher.h"
+#import "OCSpecEqualMatcher.h"
 
 @implementation NSObject(OCSpecMatchers)
 
@@ -66,9 +67,24 @@
 	return [self beA];
 }
 
+- (id<OCSpecMatcher>)beAnInstanceOf
+{
+	return [[OCSpecBeAnInstanceOfMatcher alloc] initWithExpected:self];
+}
+
+- (id<OCSpecMatcher>)beInstanceOf
+{
+	return [self beAnInstanceOf];
+}
+
 - (id<OCSpecMatcher>)beAKindOf
 {
 	return [[OCSpecBeAKindOfMatcher alloc] initWithExpected:self];
+}
+
+- (id<OCSpecMatcher>)beKindOf
+{
+	return [self beAKindOf];
 }
 
 //------------------------------------------------------------------------------
