@@ -32,6 +32,10 @@
 
 @implementation NSObject(OCSpecMatchers)
 
+//------------------------------------------------------------------------------
+#pragma mark                                                                  be
+//------------------------------------------------------------------------------
+
 + (id<OCSpecMatcher>)beTrue
 {
 	return [[OCSpecTrueMatcher alloc] initWithExpected:nil];
@@ -52,10 +56,24 @@
 	return [self equal];
 }
 
+- (id<OCSpecMatcher>)beA
+{
+	return [self beAKindOf];
+}
+
+- (id<OCSpecMatcher>)beAn
+{
+	return [self beA];
+}
+
 - (id<OCSpecMatcher>)beAKindOf
 {
 	return [[OCSpecBeAKindOfMatcher alloc] initWithExpected:self];
 }
+
+//------------------------------------------------------------------------------
+#pragma mark                                                               equal
+//------------------------------------------------------------------------------
 
 - (id<OCSpecMatcher>)equal
 {

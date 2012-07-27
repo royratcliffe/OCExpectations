@@ -36,7 +36,10 @@
 + (id<OCSpecMatcher>)beTrue;
 + (id<OCSpecMatcher>)beFalse;
 + (id<OCSpecMatcher>)beNil;
+
 - (id<OCSpecMatcher>)be;
+- (id<OCSpecMatcher>)beA;
+- (id<OCSpecMatcher>)beAn;
 - (id<OCSpecMatcher>)beAKindOf;
 
 - (id<OCSpecMatcher>)equal;
@@ -65,6 +68,14 @@
 
 #ifndef be
 #define be(expected) [(expected) be]
+#endif
+
+#ifndef be_a
+#define be_a(expected) [(expected) beA]
+#endif
+
+#ifndef be_an
+#define be_an(expected) [(expected) beAn]
 #endif
 
 #ifndef be_a_kind_of
