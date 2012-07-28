@@ -33,3 +33,8 @@ NSNumber *OCSpecNot(id objectOrNil)
 {
 	return objectOrNil == nil || [objectOrNil isKindOfClass:[NSNumber class]] ? OCSpecNotBool(objectOrNil) : @NO;
 }
+
+id OCSpecNullForNil(id objectOrNil)
+{
+	return objectOrNil == nil ? [NSNull null] : objectOrNil;
+}

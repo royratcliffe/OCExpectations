@@ -1,4 +1,4 @@
-// OCExpectations OCSpecNilMatcher.m
+// OCExpectations OCSpecNullMatcher.m
 //
 // Copyright © 2012, The OCCukes Organisation. All rights reserved.
 //
@@ -22,13 +22,13 @@
 //
 //------------------------------------------------------------------------------
 
-#import "OCSpecNilMatcher.h"
+#import "OCSpecNullMatcher.h"
 
-@implementation OCSpecNilMatcher
+@implementation OCSpecNullMatcher
 
 - (id)matches:(id)actual
 {
-	return @([super matches:actual] == nil);
+	return @([super matches:actual] == [NSNull null]);
 }
 
 @end

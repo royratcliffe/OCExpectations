@@ -1,4 +1,4 @@
-// OCExpectations OCSpecNilMatcher.h
+// OCExpectations OCSpecNullMatcher.h
 //
 // Copyright © 2012, The OCCukes Organisation. All rights reserved.
 //
@@ -24,6 +24,6 @@
 
 #import <OCExpectations/OCExpectations.h>
 
-@interface OCSpecNilMatcher : OCSpecBaseMatcher
+@interface OCSpecNullMatcher : OCSpecBaseMatcher
 
 @end

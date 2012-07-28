@@ -37,7 +37,7 @@
 
 + (id<OCSpecMatcher>)beTrue;
 + (id<OCSpecMatcher>)beFalse;
-+ (id<OCSpecMatcher>)beNil;
++ (id<OCSpecMatcher>)beNull;
 
 - (id<OCSpecMatcher>)be;
 - (id<OCSpecMatcher>)beA;
@@ -70,8 +70,8 @@
 #define be_false [NSObject beFalse]
 #endif
 
-#ifndef be_nil
-#define be_nil [NSObject beNil]
+#ifndef be_null
+#define be_null [NSObject beNull]
 #endif
 
 #ifndef be
