@@ -129,7 +129,9 @@
 	// In Objective-C, you cannot send messages to the nil literal. Sending [nil
 	// should:aMatcher] using a literal nil fails at compile time: a "void *"
 	// bad receiver type. However, you really can send to nil. You only have to
-	// cast the nil to an id, that is, send [(id)nil should:aMatcher].
+	// cast the nil to an id, that is, send [(id)nil should:aMatcher]. However,
+	// Objective-C cannot match actual nils because nil receivers do not invoke
+	// methods. When expecting nils therefore, convert the actual nils to nulls.
 	id objectOrNil = nil;
 	STAssertNoThrow([OCSpecNullForNil(objectOrNil) should:be_null], nil);
 }
