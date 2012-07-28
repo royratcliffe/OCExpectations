@@ -124,7 +124,7 @@
 	STAssertNoThrow([@NO shouldNot:be_true], nil);
 }
 
-- (void)testNilShouldBeNil
+- (void)testNilShouldBeNull
 {
 	// In Objective-C, you cannot send messages to the nil literal. Sending [nil
 	// should:aMatcher] using a literal nil fails at compile time: a "void *"
