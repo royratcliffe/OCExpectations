@@ -202,6 +202,18 @@
 	}
 }
 
+- (void)testIndexedSubscripting
+{
+	@try
+	{
+		[@[@"a", @"b", @"c"][0] should:be(@"a")];
+	}
+	@catch (NSException *exception)
+	{
+		[self failWithException:exception];
+	}
+}
+
 - (void)testVersioning
 {
 	STAssertNotNil(OCExpectationsVersionString(), nil);
