@@ -92,6 +92,10 @@
 		78ED360915BDB298007D00E1 /* OCSpecEqlMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78ED360715BDB298007D00E1 /* OCSpecEqlMatcher.m */; };
 		78ED360A15BDB298007D00E1 /* OCSpecEqlMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 78ED360715BDB298007D00E1 /* OCSpecEqlMatcher.m */; };
 		78ED362715BDC583007D00E1 /* OCSpecEqlMatcher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78ED360615BDB298007D00E1 /* OCSpecEqlMatcher.h */; };
+		78F08EB015C7D15C006978E7 /* NSArray+OCIndexedSubscript.h in Headers */ = {isa = PBXBuildFile; fileRef = 78F08EAE15C7D15C006978E7 /* NSArray+OCIndexedSubscript.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78F08EB115C7D15C006978E7 /* NSArray+OCIndexedSubscript.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F08EAF15C7D15C006978E7 /* NSArray+OCIndexedSubscript.m */; };
+		78F08EB215C7D15C006978E7 /* NSArray+OCIndexedSubscript.m in Sources */ = {isa = PBXBuildFile; fileRef = 78F08EAF15C7D15C006978E7 /* NSArray+OCIndexedSubscript.m */; };
+		78F08EB415C7D871006978E7 /* NSArray+OCIndexedSubscript.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 78F08EAE15C7D15C006978E7 /* NSArray+OCIndexedSubscript.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -136,6 +140,7 @@
 				7807A31415B4587800E69441 /* OCNegativeExpectationHandler.h in CopyFiles */,
 				7807A31515B4587800E69441 /* OCSpecHelpers.h in CopyFiles */,
 				7834617715B8443000412CAA /* OCExceptions.h in CopyFiles */,
+				78F08EB415C7D871006978E7 /* NSArray+OCIndexedSubscript.h in CopyFiles */,
 				783A48D115B468D600AD74F7 /* Versioning.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -197,6 +202,8 @@
 		78E3582215BD9A7400824B6E /* OCSpecNilMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecNilMatcher.m; sourceTree = "<group>"; };
 		78ED360615BDB298007D00E1 /* OCSpecEqlMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecEqlMatcher.h; sourceTree = "<group>"; };
 		78ED360715BDB298007D00E1 /* OCSpecEqlMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCSpecEqlMatcher.m; sourceTree = "<group>"; };
+		78F08EAE15C7D15C006978E7 /* NSArray+OCIndexedSubscript.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+OCIndexedSubscript.h"; sourceTree = "<group>"; };
+		78F08EAF15C7D15C006978E7 /* NSArray+OCIndexedSubscript.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+OCIndexedSubscript.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +327,8 @@
 				78AC87FE15B3D9F30062854A /* OCSpecHelpers.m */,
 				7834617115B843B900412CAA /* OCExceptions.h */,
 				7834617215B843B900412CAA /* OCExceptions.m */,
+				78F08EAE15C7D15C006978E7 /* NSArray+OCIndexedSubscript.h */,
+				78F08EAF15C7D15C006978E7 /* NSArray+OCIndexedSubscript.m */,
 				78C5D6B315B2858B00CA3D41 /* Supporting Files */,
 			);
 			path = OCExpectations;
@@ -382,6 +391,7 @@
 				78ED360815BDB298007D00E1 /* OCSpecEqlMatcher.h in Headers */,
 				783D00A015C2B23F0022196E /* OCSpecBeAnInstanceOfMatcher.h in Headers */,
 				783D00A715C2C5080022196E /* OCSpecBeWithinMatcher.h in Headers */,
+				78F08EB015C7D15C006978E7 /* NSArray+OCIndexedSubscript.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -585,6 +595,7 @@
 				783A48D015B4689100AD74F7 /* Versioning.m in Sources */,
 				783D00A915C2C5080022196E /* OCSpecBeWithinMatcher.m in Sources */,
 				783D00AF15C2D4630022196E /* OCSpecIncludeMatcher.m in Sources */,
+				78F08EB215C7D15C006978E7 /* NSArray+OCIndexedSubscript.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +628,7 @@
 				783D00A115C2B23F0022196E /* OCSpecBeAnInstanceOfMatcher.m in Sources */,
 				783D00A815C2C5080022196E /* OCSpecBeWithinMatcher.m in Sources */,
 				783D00AE15C2D4630022196E /* OCSpecIncludeMatcher.m in Sources */,
+				78F08EB115C7D15C006978E7 /* NSArray+OCIndexedSubscript.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
