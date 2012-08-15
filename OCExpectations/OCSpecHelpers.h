@@ -41,3 +41,13 @@ NSNumber *OCSpecNotBool(NSNumber *boolOrNil);
  * NSNumbers as booleans.
  */
 NSNumber *OCSpecNot(id objectOrNil);
+
+/*!
+ * @brief Substitutes null for `nil`.
+ * @details Answers `+[NSNull null]` when the argument equals `nil`. Everything
+ * else passes through unchanged. Objective-C never sends messages to `nil`. It
+ * ignores messages to `nil` and consequently expectations and matchers never
+ * run. If you expect `nil`, pass the expected through this helper function. In
+ * Objective-C, `nil` is a valid receiver only the receiver is not an object.
+ */
+id OCSpecNullForNil(id objectOrNil);

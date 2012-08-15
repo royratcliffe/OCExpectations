@@ -33,7 +33,7 @@
 // determine whether the Foundation framework does or does not define these
 // methods. Instead, rely on the availability macros.
 // See http://clang.llvm.org/docs/ObjectiveCLiterals.html for details.
-#if __IPHONE_5_1 <= __IPHONE_OS_VERSION_MAX_ALLOWED && __has_feature(objc_subcripting)
+#if __IPHONE_5_1 <= __IPHONE_OS_VERSION_MAX_ALLOWED && __has_feature(objc_subscripting)
 #define OC_SPEC_EXTENDS_NS_ARRAY_INDEXED_SUBSCRIPT 1
 #else
 #define OC_SPEC_EXTENDS_NS_ARRAY_INDEXED_SUBSCRIPT 0

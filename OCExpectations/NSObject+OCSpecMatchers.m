@@ -26,7 +26,7 @@
 
 #import "OCSpecTrueMatcher.h"
 #import "OCSpecFalseMatcher.h"
-#import "OCSpecNilMatcher.h"
+#import "OCSpecNullMatcher.h"
 #import "OCSpecBeAnInstanceOfMatcher.h"
 #import "OCSpecBeAKindOfMatcher.h"
 #import "OCSpecBeWithinMatcher.h"
@@ -50,9 +50,9 @@
 	return [[OCSpecFalseMatcher alloc] initWithExpected:nil];
 }
 
-+ (id<OCSpecMatcher>)beNil
++ (id<OCSpecMatcher>)beNull
 {
-	return [[OCSpecNilMatcher alloc] initWithExpected:nil];
+	return [[OCSpecNullMatcher alloc] initWithExpected:nil];
 }
 
 - (id<OCSpecMatcher>)be

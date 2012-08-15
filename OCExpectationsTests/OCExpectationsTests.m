@@ -124,13 +124,16 @@
 	STAssertNoThrow([@NO shouldNot:be_true], nil);
 }
 
-- (void)testNilShouldBeNil
+- (void)testNilShouldBeNull
 {
 	// In Objective-C, you cannot send messages to the nil literal. Sending [nil
 	// should:aMatcher] using a literal nil fails at compile time: a "void *"
 	// bad receiver type. However, you really can send to nil. You only have to
-	// cast the nil to an id, that is, send [(id)nil should:aMatcher].
-	STAssertNoThrow([(id)nil should:be_nil], nil);
+	// cast the nil to an id, that is, send [(id)nil should:aMatcher]. However,
+	// Objective-C cannot match actual nils because nil receivers do not invoke
+	// methods. When expecting nils therefore, convert the actual nils to nulls.
+	id objectOrNil = nil;
+	STAssertNoThrow([OCSpecNullForNil(objectOrNil) should:be_null], nil);
 }
 
 - (void)testEqlVersusEqual
@@ -192,6 +195,18 @@
 		// includes matcher converts actuals and expected's to sets before
 		// answering. Array 1, 1 becomes set 1; 1 is one and the same object.
 		[@1 should:[@[@1, @1] include]];
+	}
+	@catch (NSException *exception)
+	{
+		[self failWithException:exception];
+	}
+}
+
+- (void)testIndexedSubscripting
+{
+	@try
+	{
+		[@[@"a", @"b", @"c"][0] should:be(@"a")];
 	}
 	@catch (NSException *exception)
 	{

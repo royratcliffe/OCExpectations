@@ -28,7 +28,7 @@
 #import <OCExpectations/OCSpecBaseMatcher.h>
 #import <OCExpectations/OCSpecTrueMatcher.h>
 #import <OCExpectations/OCSpecFalseMatcher.h>
-#import <OCExpectations/OCSpecNilMatcher.h>
+#import <OCExpectations/OCSpecNullMatcher.h>
 #import <OCExpectations/OCSpecBeAnInstanceOfMatcher.h>
 #import <OCExpectations/OCSpecBeAKindOfMatcher.h>
 #import <OCExpectations/OCSpecBeWithinMatcher.h>
