@@ -54,6 +54,7 @@
 - (id<OCSpecMatcher>)include;
 
 - (id<OCSpecMatcher>)compareSame;
+- (id<OCSpecMatcher>)compareAscending;
 
 @end
 
@@ -122,4 +123,8 @@
 
 #ifndef compare_same
 #define compare_same(expected) [(expected) compareSame]
+#endif
+
+#ifndef compare_ascending
+#define compare_ascending(expected) [(expected) compareAscending]
 #endif

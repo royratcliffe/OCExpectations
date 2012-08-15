@@ -36,6 +36,7 @@
 #import <OCExpectations/OCSpecEqlMatcher.h>
 #import <OCExpectations/OCSpecIncludeMatcher.h>
 #import <OCExpectations/OCSpecCompareSameMatcher.h>
+#import <OCExpectations/OCSpecCompareAscendingMatcher.h>
 #import <OCExpectations/OCPositiveExpectationHandler.h>
 #import <OCExpectations/OCNegativeExpectationHandler.h>
 #import <OCExpectations/OCSpecHelpers.h>
