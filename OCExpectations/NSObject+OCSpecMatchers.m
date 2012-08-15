@@ -33,6 +33,7 @@
 #import "OCSpecEqualMatcher.h"
 #import "OCSpecEqlMatcher.h"
 #import "OCSpecIncludeMatcher.h"
+#import "OCSpecCompareSameMatcher.h"
 
 @implementation NSObject(OCSpecMatchers)
 
@@ -112,6 +113,11 @@
 - (id<OCSpecMatcher>)include
 {
 	return [[OCSpecIncludeMatcher alloc] initWithExpected:self];
+}
+
+- (id<OCSpecMatcher>)compareSame
+{
+	return [[OCSpecCompareSameMatcher alloc] initWithExpected:self];
 }
 
 @end

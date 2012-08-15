@@ -202,6 +202,11 @@
 	}
 }
 
+- (void)testCompare
+{
+	STAssertNoThrow([@123 should:[@123 compareSame]], nil);
+}
+
 - (void)testIndexedSubscripting
 {
 	@try

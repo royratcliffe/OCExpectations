@@ -53,6 +53,8 @@
 
 - (id<OCSpecMatcher>)include;
 
+- (id<OCSpecMatcher>)compareSame;
+
 @end
 
 /*
@@ -116,4 +118,8 @@
 
 #ifndef include
 #define include(expected) [(expected) include]
+#endif
+
+#ifndef compare_same
+#define compare_same(expected) [(expected) compareSame]
 #endif
