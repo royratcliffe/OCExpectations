@@ -130,6 +130,14 @@
 #define compare_ascending(expected) [(expected) compareAscending]
 #endif
 
+#ifndef compare_less_than
+#define compare_less_than(expected) [(expected) compareAscending]
+#endif
+
 #ifndef compare_descending
 #define compare_descending(expected) [(expected) compareDescending]
+#endif
+
+#ifndef compare_more_than
+#define compare_more_than(expected) [(expected) compareDescending]
 #endif

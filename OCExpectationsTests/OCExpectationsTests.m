@@ -212,6 +212,9 @@
 	
 	STAssertNoThrow([@1 shouldNot:compare_ascending(@1)], nil);
 	STAssertNoThrow([@1 shouldNot:compare_descending(@1)], nil);
+	
+	STAssertNoThrow([@1 should:compare_less_than(@2)], nil);
+	STAssertNoThrow([@2 should:compare_more_than(@1)], nil);
 }
 
 - (void)testIndexedSubscripting
