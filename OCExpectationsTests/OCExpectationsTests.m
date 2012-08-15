@@ -205,6 +205,7 @@
 - (void)testCompare
 {
 	STAssertNoThrow([@123 should:[@123 compareSame]], nil);
+	STAssertNoThrow([@123 should:compare_same(@123)], nil);
 }
 
 - (void)testIndexedSubscripting
