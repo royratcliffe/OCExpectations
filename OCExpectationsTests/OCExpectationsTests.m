@@ -217,6 +217,13 @@
 	STAssertNoThrow([@2 should:compare_more_than(@1)], nil);
 	
 	STAssertNoThrow([[NSDate date] should:compare_less_than([NSDate dateWithTimeIntervalSinceNow:1.0])], nil);
+	
+	// Actual should compare "same or more than" expected becomes actual should
+	// "not compare less than" expected.
+	for (NSNumber *number in @[ @1, @2, @3, @4 ])
+	{
+		STAssertNoThrow([number shouldNot:compare_less_than(@1)], nil);
+	}
 }
 
 - (void)testIndexedSubscripting
