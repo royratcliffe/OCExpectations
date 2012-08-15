@@ -215,6 +215,8 @@
 	
 	STAssertNoThrow([@1 should:compare_less_than(@2)], nil);
 	STAssertNoThrow([@2 should:compare_more_than(@1)], nil);
+	
+	STAssertNoThrow([[NSDate date] should:compare_less_than([NSDate dateWithTimeIntervalSinceNow:1.0])], nil);
 }
 
 - (void)testIndexedSubscripting
