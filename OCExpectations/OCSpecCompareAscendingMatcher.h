@@ -24,6 +24,12 @@
 
 #import <OCExpectations/OCExpectations.h>
 
+/*!
+ * @details Ascending comparison means the first (left-most comparison
+ * component, the message receiver) ascends to the second (right-most comparison
+ * component, the argument). In expectation terminology, the actual ascends to
+ * the expected.
+ */
 @interface OCSpecCompareAscendingMatcher : OCSpecBaseMatcher
 
 @end
