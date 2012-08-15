@@ -35,6 +35,7 @@
 #import "OCSpecIncludeMatcher.h"
 #import "OCSpecCompareSameMatcher.h"
 #import "OCSpecCompareAscendingMatcher.h"
+#import "OCSpecCompareDescendingMatcher.h"
 
 @implementation NSObject(OCSpecMatchers)
 
@@ -132,6 +133,11 @@
 - (id<OCSpecMatcher>)compareAscending
 {
 	return [[OCSpecCompareAscendingMatcher alloc] initWithExpected:self];
+}
+
+- (id<OCSpecMatcher>)compareDescending
+{
+	return [[OCSpecCompareDescendingMatcher alloc] initWithExpected:self];
 }
 
 @end
