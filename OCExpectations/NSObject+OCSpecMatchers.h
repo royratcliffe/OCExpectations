@@ -66,6 +66,8 @@
  * tokens, including Objective-C method names.
  */
 
+//--------------------------------------------------------------------------- be
+
 #ifndef be_true
 #define be_true [NSObject beTrue]
 #endif
@@ -110,6 +112,8 @@
 #define be_within(expected) [(expected) beWithin]
 #endif
 
+//------------------------------------------------------------------------ equal
+
 #ifndef equal
 #define equal(expected) [(expected) equal]
 #endif
@@ -118,9 +122,13 @@
 #define eql(expected) [(expected) eql]
 #endif
 
+//---------------------------------------------------------------------- include
+
 #ifndef include
 #define include(expected) [(expected) include]
 #endif
+
+//---------------------------------------------------------------------- compare
 
 #ifndef compare_same
 #define compare_same(expected) [(expected) compareSame]
