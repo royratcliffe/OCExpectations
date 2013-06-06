@@ -1,28 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0460"
-   version = "1.7">
+   LastUpgradeVersion = "0450"
+   version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
-      <PostActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "open &quot;$SOURCE_ROOT/$TARGET_NAME/html/index.html&quot;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "7834618315B84F8D00412CAA"
-                     BuildableName = "OCExpectationsPages"
-                     BlueprintName = "OCExpectationsPages"
-                     ReferencedContainer = "container:OCExpectations.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-      </PostActions>
       <BuildActionEntries>
          <BuildActionEntry
             buildForTesting = "YES"
@@ -32,9 +14,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7834618315B84F8D00412CAA"
-               BuildableName = "OCExpectationsPages"
-               BlueprintName = "OCExpectationsPages"
+               BlueprintIdentifier = "7807A2DC15B4542A00E69441"
+               BuildableName = "libOCExpectations.a"
+               BlueprintName = "OCExpectationsLib"
+               ReferencedContainer = "container:OCExpectations.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7807A2EB15B4542A00E69441"
+               BuildableName = "OCExpectationsLibTests.octest"
+               BlueprintName = "OCExpectationsLibTests"
                ReferencedContainer = "container:OCExpectations.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,6 +42,16 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7807A2EB15B4542A00E69441"
+               BuildableName = "OCExpectationsLibTests.octest"
+               BlueprintName = "OCExpectationsLibTests"
+               ReferencedContainer = "container:OCExpectations.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
