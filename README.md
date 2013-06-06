@@ -1,5 +1,7 @@
 # ![Cucumber Roll](http://files.softicons.com/download/object-icons/richs-misc-icons-by-rich-d/png/24/Cucumber%20Roll.png) Objective-C Expectations
 
+[![Build Status](https://travis-ci.org/royratcliffe/OCExpectations.png?branch=master)](https://travis-ci.org/royratcliffe/OCExpectations)
+
 The OCExpectations project provides a library of Objective-C expectation matchers styled after [RSpec](http://rspec.info/) expectations. Expressing an expectation in Ruby RSpec as
 
 ```ruby

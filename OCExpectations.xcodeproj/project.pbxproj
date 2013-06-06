@@ -427,23 +427,6 @@
 		};
 /* End PBXHeadersBuildPhase section */
 
-/* Begin PBXLegacyTarget section */
-		7834618315B84F8D00412CAA /* OCExpectationsPages */ = {
-			isa = PBXLegacyTarget;
-			buildArgumentsString = "-c \"$HOME/.rvm/bin/rvm-auto-ruby -r XcodePages -e XcodePages.doxygen_docset_install\"";
-			buildConfigurationList = 7834618415B84F8D00412CAA /* Build configuration list for PBXLegacyTarget "OCExpectationsPages" */;
-			buildPhases = (
-			);
-			buildToolPath = /bin/sh;
-			buildWorkingDirectory = "";
-			dependencies = (
-			);
-			name = OCExpectationsPages;
-			passBuildSettingsInEnvironment = 1;
-			productName = OCExceptionsPages;
-		};
-/* End PBXLegacyTarget section */
-
 /* Begin PBXNativeTarget section */
 		7807A2DC15B4542A00E69441 /* OCExpectationsLib */ = {
 			isa = PBXNativeTarget;
@@ -543,7 +526,6 @@
 				78C5D6C015B2858B00CA3D41 /* OCExpectationsTests */,
 				7807A2DC15B4542A00E69441 /* OCExpectationsLib */,
 				7807A2EB15B4542A00E69441 /* OCExpectationsLibTests */,
-				7834618315B84F8D00412CAA /* OCExpectationsPages */,
 			);
 		};
 /* End PBXProject section */
@@ -793,35 +775,6 @@
 			};
 			name = Release;
 		};
-		7834618515B84F8D00412CAA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				DEBUGGING_SYMBOLS = YES;
-				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-				GCC_OPTIMIZATION_LEVEL = 0;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PATH = "/bin:/usr/bin:/usr/local/bin:/Applications/Doxygen.app/Contents/Resources";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		7834618615B84F8D00412CAA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COMBINE_HIDPI_IMAGES = YES;
-				OTHER_CFLAGS = "";
-				OTHER_LDFLAGS = "";
-				PATH = "/bin:/usr/bin:/usr/local/bin:/Applications/Doxygen.app/Contents/Resources";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		78C5D6D115B2858B00CA3D41 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -956,15 +909,6 @@
 			buildConfigurations = (
 				7807A30115B4542A00E69441 /* Debug */,
 				7807A30215B4542A00E69441 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7834618415B84F8D00412CAA /* Build configuration list for PBXLegacyTarget "OCExpectationsPages" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7834618515B84F8D00412CAA /* Debug */,
-				7834618615B84F8D00412CAA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
