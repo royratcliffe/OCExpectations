@@ -66,13 +66,13 @@
 {
 	STAssertEqualObjects(OCSpecNot(@NO), @YES, nil);
 	STAssertEqualObjects(OCSpecNot(nil), @YES, nil);
-	
+
 	// In Ruby, the following would answer false. That is, Ruby expression !0
 	// answers false. However, in Objective-C, @0 equals @NO. They are one and
 	// the same thing: both integer numbers with value of zero. Hence negating
 	// zero equates to negating NO, answering YES.
 	STAssertEqualObjects(OCSpecNot(@0), @YES, nil);
-	
+
 	// Negating an object, any object, answers NO. Note that in Objective-C,
 	// null is not nil, therefore a non-nil object answering NO.
 	STAssertEqualObjects(OCSpecNot([NSNull null]), @NO, nil);
@@ -139,7 +139,7 @@
 - (void)testEqlVersusEqual
 {
 	STAssertNoThrow([@"hello" should:equal(@"hello")], nil);
-	
+
 	// You might expect the following to not throw. However, it throws. Due to
 	// clever compiler optimisations, the two strings share the same
 	// identity. Strings in Apple's Foundation frameworks are immutable
@@ -148,7 +148,7 @@
 	//	STAssertNoThrow([@"hello" shouldNot:eql(@"hello")], nil);
 	//
 	STAssertThrows([@"hello" shouldNot:eql(@"hello")], nil);
-	
+
 	// Work around compiler optimisations and warnings by constructing a string
 	// from a C string. That will create two equal but non-identical
 	// strings. They should compare equal but should not be identical.
@@ -185,12 +185,12 @@
 		// arrays
 		[@[@1, @2, @3] should:include(@2)];
 		[@[@1, @2, @3] should:[@[@1, @2] include]];
-		
+
 		// hashes
 		[@{@"alpha": @1, @"beta": @2, @"gamma": @3} should:include(@"beta")];
 		[@{@"alpha": @1, @"beta": @2, @"gamma": @3} should:[@[@"beta", @"gamma"] include]];
 		[@{@"alpha": @1, @"beta": @2, @"gamma": @3} should:[@{@"beta": @2, @"gamma": @3} include]];
-		
+
 		// The following expectation passes because 1, 1 is a subset of 1. The
 		// includes matcher converts actuals and expected's to sets before
 		// answering. Array 1, 1 becomes set 1; 1 is one and the same object.
@@ -206,18 +206,18 @@
 {
 	STAssertNoThrow([@123 should:[@123 compareSame]], nil);
 	STAssertNoThrow([@123 should:compare_same(@123)], nil);
-	
+
 	STAssertNoThrow([@1 should:compare_ascending(@2)], nil);
 	STAssertNoThrow([@2 should:compare_descending(@1)], nil);
-	
+
 	STAssertNoThrow([@1 shouldNot:compare_ascending(@1)], nil);
 	STAssertNoThrow([@1 shouldNot:compare_descending(@1)], nil);
-	
+
 	STAssertNoThrow([@1 should:compare_less_than(@2)], nil);
 	STAssertNoThrow([@2 should:compare_more_than(@1)], nil);
-	
+
 	STAssertNoThrow([[NSDate date] should:compare_less_than([NSDate dateWithTimeIntervalSinceNow:1.0])], nil);
-	
+
 	// Actual should compare "same or more than" expected becomes actual should
 	// "not compare less than" expected.
 	for (NSNumber *number in @[ @1, @2, @3, @4 ])

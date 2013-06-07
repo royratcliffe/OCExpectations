@@ -66,12 +66,12 @@
 									count:(NSUInteger)len
 {
 	NSUInteger count = 0;
-	
+
 	if (state->state == 0)
 	{
 		state->mutationsPtr = state->extra;
 	}
-	
+
 	while (state->state < self.objects.count && count < len)
 	{
 		id object = [self.objects objectAtIndex:state->state++];
@@ -81,7 +81,7 @@
 		}
 	}
 	state->itemsPtr = buffer;
-	
+
 	// Pop off spent objects from the front of the mutable array. Is this an
 	// efficient stack implementation? Will NSMutableArray always copy? Even if
 	// so, the number of object pointers in the array will always be relatively
@@ -91,7 +91,7 @@
 		[self.objects removeObjectsInRange:NSMakeRange(0, len)];
 		state->state -= len;
 	}
-	
+
 	return count;
 }
 
