@@ -37,6 +37,10 @@
 		7834617415B843BA00412CAA /* OCExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7834617215B843B900412CAA /* OCExceptions.m */; };
 		7834617515B843BA00412CAA /* OCExceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7834617215B843B900412CAA /* OCExceptions.m */; };
 		7834617715B8443000412CAA /* OCExceptions.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7834617115B843B900412CAA /* OCExceptions.h */; };
+		7835CFC61761DB4C000D464C /* OCRecursiveEnumeration.h in Headers */ = {isa = PBXBuildFile; fileRef = 7835CFC41761DB4C000D464C /* OCRecursiveEnumeration.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7835CFC71761DB4C000D464C /* OCRecursiveEnumeration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7835CFC51761DB4C000D464C /* OCRecursiveEnumeration.m */; };
+		7835CFC81761DB4C000D464C /* OCRecursiveEnumeration.m in Sources */ = {isa = PBXBuildFile; fileRef = 7835CFC51761DB4C000D464C /* OCRecursiveEnumeration.m */; };
+		7835CFC91761DB96000D464C /* OCRecursiveEnumeration.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7835CFC41761DB4C000D464C /* OCRecursiveEnumeration.h */; };
 		783A48CE15B4689100AD74F7 /* Versioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 783A48CC15B4689100AD74F7 /* Versioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		783A48CF15B4689100AD74F7 /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A48CD15B4689100AD74F7 /* Versioning.m */; };
 		783A48D015B4689100AD74F7 /* Versioning.m in Sources */ = {isa = PBXBuildFile; fileRef = 783A48CD15B4689100AD74F7 /* Versioning.m */; };
@@ -156,6 +160,7 @@
 				7807A31515B4587800E69441 /* OCSpecHelpers.h in CopyFiles */,
 				7834617715B8443000412CAA /* OCExceptions.h in CopyFiles */,
 				78F08EB415C7D871006978E7 /* NSArray+OCIndexedSubscript.h in CopyFiles */,
+				7835CFC91761DB96000D464C /* OCRecursiveEnumeration.h in CopyFiles */,
 				783A48D115B468D600AD74F7 /* Versioning.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,6 +176,8 @@
 		7807A2EE15B4542A00E69441 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		7834617115B843B900412CAA /* OCExceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCExceptions.h; sourceTree = "<group>"; };
 		7834617215B843B900412CAA /* OCExceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCExceptions.m; sourceTree = "<group>"; };
+		7835CFC41761DB4C000D464C /* OCRecursiveEnumeration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCRecursiveEnumeration.h; sourceTree = "<group>"; };
+		7835CFC51761DB4C000D464C /* OCRecursiveEnumeration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCRecursiveEnumeration.m; sourceTree = "<group>"; };
 		783A48CC15B4689100AD74F7 /* Versioning.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Versioning.h; sourceTree = "<group>"; };
 		783A48CD15B4689100AD74F7 /* Versioning.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Versioning.m; sourceTree = "<group>"; };
 		783D009E15C2B23F0022196E /* OCSpecBeAnInstanceOfMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCSpecBeAnInstanceOfMatcher.h; sourceTree = "<group>"; };
@@ -356,6 +363,8 @@
 				7834617215B843B900412CAA /* OCExceptions.m */,
 				78F08EAE15C7D15C006978E7 /* NSArray+OCIndexedSubscript.h */,
 				78F08EAF15C7D15C006978E7 /* NSArray+OCIndexedSubscript.m */,
+				7835CFC41761DB4C000D464C /* OCRecursiveEnumeration.h */,
+				7835CFC51761DB4C000D464C /* OCRecursiveEnumeration.m */,
 				78C5D6B315B2858B00CA3D41 /* Supporting Files */,
 			);
 			path = OCExpectations;
@@ -422,6 +431,7 @@
 				783D00A015C2B23F0022196E /* OCSpecBeAnInstanceOfMatcher.h in Headers */,
 				783D00A715C2C5080022196E /* OCSpecBeWithinMatcher.h in Headers */,
 				78F08EB015C7D15C006978E7 /* NSArray+OCIndexedSubscript.h in Headers */,
+				7835CFC61761DB4C000D464C /* OCRecursiveEnumeration.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -611,6 +621,7 @@
 				788EFB2615DC33990098F978 /* OCSpecCompareSameMatcher.m in Sources */,
 				788EFB3515DC3A640098F978 /* OCSpecCompareAscendingMatcher.m in Sources */,
 				788EFB3C15DC3D910098F978 /* OCSpecCompareDescendingMatcher.m in Sources */,
+				7835CFC81761DB4C000D464C /* OCRecursiveEnumeration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -647,6 +658,7 @@
 				788EFB2515DC33990098F978 /* OCSpecCompareSameMatcher.m in Sources */,
 				788EFB3415DC3A640098F978 /* OCSpecCompareAscendingMatcher.m in Sources */,
 				788EFB3B15DC3D910098F978 /* OCSpecCompareDescendingMatcher.m in Sources */,
+				7835CFC71761DB4C000D464C /* OCRecursiveEnumeration.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

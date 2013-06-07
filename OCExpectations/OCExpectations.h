@@ -43,4 +43,5 @@
 #import <OCExpectations/OCSpecHelpers.h>
 #import <OCExpectations/OCExceptions.h>
 #import <OCExpectations/NSArray+OCIndexedSubscript.h>
+#import <OCExpectations/OCRecursiveEnumeration.h>
 #import <OCExpectations/Versioning.h>
