@@ -238,6 +238,16 @@
 	}
 }
 
+- (void)testRecursiveEnumeration
+{
+	NSMutableArray *objects = [NSMutableArray array];
+	for (NSDictionary *dictionary in [[OCRecursiveEnumeration alloc] initWithSuperObject:@{@0: @{@1: @{@2: @{}}}} usingSubSelector:@selector(allValues) inclusive:NO inclusiveBlock:NULL])
+	{
+		[objects addObjectsFromArray:[dictionary allKeys]];
+	}
+	STAssertEqualObjects((@[@1, @2]), objects, nil);
+}
+
 - (void)testVersioning
 {
 	STAssertNotNil(OCExpectationsVersionString(), nil);
