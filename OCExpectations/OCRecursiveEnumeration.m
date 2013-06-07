@@ -24,6 +24,11 @@
 
 #import "OCRecursiveEnumeration.h"
 
+// Semantic issue: performSelector may cause a leak because its selector is
+// unknown! Ignore this "ARC performSelector leaks" warning.
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Warc-performSelector-leaks"
+
 @interface OCRecursiveEnumeration()
 
 @property(assign, NS_NONATOMIC_IOSONLY) SEL subSelector;
@@ -91,3 +96,6 @@
 }
 
 @end
+
+// arc-performSelector-leaks ignored
+#pragma clang diagnostic pop
